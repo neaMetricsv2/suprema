@@ -1,0 +1,97 @@
+@inject Suprema.Core.Abstractions.IContentService Content
+@{
+    var categories = Content.GetCategories();
+    var solutions  = Content.GetSolutions();
+}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+
+      @* Col 1 — Brand + contact *@
+      <div class="col-lg-4 col-md-6">
+        <p class="fw-bold text-white mb-1" style="font-size:1.1rem;">Suprema South Africa</p>
+        <p class="mb-3" style="font-size:.85rem;">@L["Footer.Tagline"]</p>
+
+        <ul class="list-unstyled mb-0" style="font-size:.85rem;">
+          <li class="mb-1">
+            <strong class="text-white">Address:</strong><br />
+            PLACEHOLDER — registered address, Johannesburg, South Africa
+          </li>
+          <li class="mt-2 mb-1">
+            <strong class="text-white">Tel:</strong>
+            <a href="tel:+27XXXXXXXXXX">+27 (0)XX XXX XXXX</a>
+          </li>
+          <li class="mb-1">
+            <strong class="text-white">Email:</strong>
+            <a href="mailto:info@suprema.co.za">info@suprema.co.za</a>
+          </li>
+          <li class="mt-2">
+            <strong class="text-white">@L["Footer.Support"]:</strong><br />
+            @L["Footer.SupportHours"]
+          </li>
+        </ul>
+      </div>
+
+      @* Col 2 — Products *@
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>@L["Footer.Products"]</h6>
+        <ul>
+          @foreach (var cat in categories)
+          {
+            <li>
+              <a asp-controller="Products" asp-action="Category" asp-route-category="@cat.Slug">
+                @cat.Name
+              </a>
+            </li>
+          }
+          <li><a asp-controller="Products" asp-action="Index">All Products</a></li>
+        </ul>
+      </div>
+
+      @* Col 3 — Solutions *@
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>@L["Footer.Solutions"]</h6>
+        <ul>
+          @foreach (var sol in solutions)
+          {
+            <li>
+              <a asp-controller="Solutions" asp-action="Detail" asp-route-slug="@sol.Slug">
+                @sol.Name
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      @* Col 4 — Company + Legal *@
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6>@L["Footer.Company"]</h6>
+        <ul class="mb-3">
+          <li><a asp-controller="Pages" asp-action="Show" asp-route-slug="about">About Us</a></li>
+          <li><a asp-controller="News" asp-action="Index">News</a></li>
+          <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+        </ul>
+        <h6>@L["Footer.Legal"]</h6>
+        <ul>
+          <li><a asp-controller="Legal" asp-action="Show" asp-route-slug="privacy-policy">Privacy Policy</a></li>
+          <li><a asp-controller="Legal" asp-action="Show" asp-route-slug="cookie-policy">Cookie Policy</a></li>
+          <li><a asp-controller="Legal" asp-action="Show" asp-route-slug="paia-manual">PAIA Manual</a></li>
+          <li><a asp-controller="Legal" asp-action="Show" asp-route-slug="terms">Terms of Use</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>
+        &copy; @DateTime.UtcNow.Year Suprema South Africa (Pty) Ltd.
+        Reg. No. PLACEHOLDER. @L["Footer.Rights"]
+        Suprema&reg; is a trademark of Suprema Inc., South Korea.
+      </span>
+      <span>
+        VAT No. PLACEHOLDER &nbsp;|&nbsp; POPIA Information Officer: PLACEHOLDER
+      </span>
+    </div>
+  </div>
+</footer>

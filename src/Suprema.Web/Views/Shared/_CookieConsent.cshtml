@@ -1,0 +1,77 @@
+@* POPIA-compliant cookie consent banner.
+   - Default: decline non-essential cookies.
+   - Persists choice in first-party cookie "consent.v1" (12-month expiry).
+   - Analytics scripts (data-consent="analytics") are enabled only after explicit opt-in.
+   - Re-shown if consent cookie is absent or the schema version changes.
+*@
+<div id="cookie-banner" class="d-none" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <p class="mb-0 flex-grow-1" style="max-width:680px;">
+      @L["Cookie.Message"]
+      <a asp-controller="Legal" asp-action="Show" asp-route-slug="cookie-policy" class="ms-1">@L["Cookie.PolicyLink"]</a>.
+    </p>
+    <div class="d-flex flex-wrap gap-2">
+      <button type="button" class="btn btn-sm btn-suprema"   onclick="consentAcceptAll()">@L["Cookie.AcceptAll"]</button>
+      <button type="button" class="btn btn-sm btn-outline-light" onclick="consentReject()">@L["Cookie.RejectNonEssential"]</button>
+      <button type="button" class="btn btn-sm btn-link text-white text-decoration-none" onclick="consentCustomise()">@L["Cookie.Customise"]</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+    const COOKIE_NAME = 'consent.v1';
+    const SCHEMA_VER  = '1';
+    const EXPIRY_DAYS = 365;
+
+    function getCookie(name) {
+        return document.cookie.split('; ').reduce(function(acc, pair) {
+            const parts = pair.split('=');
+            return parts[0] === name ? decodeURIComponent(parts[1] || '') : acc;
+        }, null);
+    }
+
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + days * 864e5);
+        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+    }
+
+    function parseConsent(raw) {
+        try { return JSON.parse(raw); } catch { return null; }
+    }
+
+    function applyConsent(consent) {
+        if (!consent || !consent.analytics) return;
+        document.querySelectorAll('script[data-consent="analytics"]').forEach(function(el) {
+            const s = document.createElement('script');
+            s.textContent = el.textContent;
+            document.head.appendChild(s);
+        });
+    }
+
+    function saveAndApply(analytics) {
+        const val = JSON.stringify({ v: SCHEMA_VER, analytics: analytics, ts: Date.now() });
+        setCookie(COOKIE_NAME, val, EXPIRY_DAYS);
+        applyConsent({ analytics: analytics });
+        document.getElementById('cookie-banner').classList.add('d-none');
+    }
+
+    window.consentAcceptAll  = function() { saveAndApply(true);  };
+    window.consentReject     = function() { saveAndApply(false); };
+    window.consentCustomise  = function() {
+        // TODO Phase 4: open a granular preferences modal
+        // For now, treat as reject non-essential
+        saveAndApply(false);
+    };
+
+    var raw     = getCookie(COOKIE_NAME);
+    var consent = parseConsent(raw);
+
+    if (!consent || consent.v !== SCHEMA_VER) {
+        document.getElementById('cookie-banner').classList.remove('d-none');
+    } else {
+        applyConsent(consent);
+    }
+})();
+</script>
