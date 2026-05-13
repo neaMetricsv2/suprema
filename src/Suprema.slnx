@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Suprema.Content/Suprema.Content.csproj" />
+  <Project Path="Suprema.Core/Suprema.Core.csproj" />
+  <Project Path="Suprema.Web/Suprema.Web.csproj" />
+</Solution>
