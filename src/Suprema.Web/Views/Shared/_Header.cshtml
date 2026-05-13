@@ -4,13 +4,12 @@
     var solutions  = Content.GetSolutions();
 }
 
-<header>
-<nav class="navbar navbar-expand-lg navbar-suprema sticky-top">
-  <div class="container">
+<div id="site-header" class="header-transparent">
+<nav class="navbar navbar-expand-lg navbar-suprema">
+  <div class="container-fluid px-4 px-lg-5">
 
     <a class="navbar-brand d-flex align-items-center gap-2" asp-controller="Home" asp-action="Index">
-      @* Logo: replace with <img src="/assets/logos/suprema-za-white.svg" alt="Suprema South Africa" height="32"> *@
-      <strong>Suprema</strong><span class="fw-light ms-1 d-none d-sm-inline">South Africa</span>
+      <strong>Suprema</strong><span class="fw-light ms-1 d-none d-sm-inline" style="font-weight:300;">South Africa</span>
     </a>
 
     <button class="navbar-toggler" type="button"
@@ -20,7 +19,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/products" role="button"
@@ -36,7 +35,7 @@
               </li>
             }
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" asp-controller="Products" asp-action="Index">All Products</a></li>
+            <li><a class="dropdown-item fw-semibold" asp-controller="Products" asp-action="Index">All Products</a></li>
           </ul>
         </li>
 
@@ -54,7 +53,7 @@
               </li>
             }
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" asp-controller="Solutions" asp-action="Index">All Solutions</a></li>
+            <li><a class="dropdown-item fw-semibold" asp-controller="Solutions" asp-action="Index">All Solutions</a></li>
           </ul>
         </li>
 
@@ -66,14 +65,18 @@
           <a class="nav-link" asp-controller="Pages" asp-action="Show" asp-route-slug="about">@L["Nav.About"]</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" asp-controller="Contact" asp-action="Index">@L["Nav.Contact"]</a>
+        </li>
+
       </ul>
 
-      <div class="d-flex align-items-center gap-2">
-        <a class="btn btn-sm btn-suprema" asp-controller="Contact" asp-action="Index">
+      <div class="d-flex align-items-center">
+        <a class="btn-nav-cta" asp-controller="Contact" asp-action="Index">
           @L["Nav.RequestQuote"]
         </a>
       </div>
     </div>
   </div>
 </nav>
-</header>
+</div>

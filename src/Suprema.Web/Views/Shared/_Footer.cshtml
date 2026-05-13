@@ -6,28 +6,24 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div class="row g-4">
+    <div class="row g-5">
 
       @* Col 1 — Brand + contact *@
       <div class="col-lg-4 col-md-6">
-        <p class="fw-bold text-white mb-1" style="font-size:1.1rem;">Suprema South Africa</p>
-        <p class="mb-3" style="font-size:.85rem;">@L["Footer.Tagline"]</p>
+        <p class="footer-brand-name">Suprema South Africa</p>
+        <p class="footer-tagline">@L["Footer.Tagline"]</p>
 
-        <ul class="list-unstyled mb-0" style="font-size:.85rem;">
-          <li class="mb-1">
-            <strong class="text-white">Address:</strong><br />
-            PLACEHOLDER — registered address, Johannesburg, South Africa
+        <ul class="list-unstyled mb-0" style="font-size:.88rem;line-height:1.9;">
+          <li>
+            <span style="color:rgba(255,255,255,.5);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Address</span><br/>
+            Johannesburg, South Africa
           </li>
-          <li class="mt-2 mb-1">
-            <strong class="text-white">Tel:</strong>
-            <a href="tel:+27XXXXXXXXXX">+27 (0)XX XXX XXXX</a>
-          </li>
-          <li class="mb-1">
-            <strong class="text-white">Email:</strong>
+          <li class="mt-3">
+            <span style="color:rgba(255,255,255,.5);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Email</span><br/>
             <a href="mailto:info@suprema.co.za">info@suprema.co.za</a>
           </li>
-          <li class="mt-2">
-            <strong class="text-white">@L["Footer.Support"]:</strong><br />
+          <li class="mt-3">
+            <span style="color:rgba(255,255,255,.5);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">@L["Footer.Support"]</span><br/>
             @L["Footer.SupportHours"]
           </li>
         </ul>
@@ -45,7 +41,9 @@
               </a>
             </li>
           }
-          <li><a asp-controller="Products" asp-action="Index">All Products</a></li>
+          <li class="mt-1">
+            <a asp-controller="Products" asp-action="Index" style="color:var(--sup-primary);">All Products &rsaquo;</a>
+          </li>
         </ul>
       </div>
 
@@ -61,16 +59,19 @@
               </a>
             </li>
           }
+          <li class="mt-1">
+            <a asp-controller="Solutions" asp-action="Index" style="color:var(--sup-primary);">All Solutions &rsaquo;</a>
+          </li>
         </ul>
       </div>
 
-      @* Col 4 — Company + Legal *@
-      <div class="col-lg-2 col-md-6 col-6">
+      @* Col 4 — Company *@
+      <div class="col-lg-2 col-md-3 col-6">
         <h6>@L["Footer.Company"]</h6>
-        <ul class="mb-3">
+        <ul class="mb-4">
           <li><a asp-controller="Pages" asp-action="Show" asp-route-slug="about">About Us</a></li>
           <li><a asp-controller="News" asp-action="Index">News</a></li>
-          <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+          <li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
         </ul>
         <h6>@L["Footer.Legal"]</h6>
         <ul>
@@ -82,15 +83,16 @@
       </div>
 
     </div>
+  </div>
 
-    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+  <div class="footer-bottom">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
       <span>
-        &copy; @DateTime.UtcNow.Year Suprema South Africa (Pty) Ltd.
-        Reg. No. PLACEHOLDER. @L["Footer.Rights"]
+        &copy; @DateTime.UtcNow.Year Suprema South Africa (Pty) Ltd. @L["Footer.Rights"]
         Suprema&reg; is a trademark of Suprema Inc., South Korea.
       </span>
-      <span>
-        VAT No. PLACEHOLDER &nbsp;|&nbsp; POPIA Information Officer: PLACEHOLDER
+      <span style="color:rgba(255,255,255,.3);">
+        Authorised distributor &mdash; supremainc.com
       </span>
     </div>
   </div>
