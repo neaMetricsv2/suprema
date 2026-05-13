@@ -1,0 +1,41 @@
+{
+  "slug": "biostation-3",
+  "categorySlug": "access-control",
+  "name": "BioStation 3",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "heroImage": "/assets/products/biostation-3/hero.jpg",
+  "gallery": [
+    "/assets/products/biostation-3/gallery-01.jpg",
+    "/assets/products/biostation-3/gallery-02.jpg"
+  ],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "face" },
+    { "title": "PLACEHOLDER feature 3", "description": "From approved kit.", "icon": "lock" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "CPU": "PLACEHOLDER",
+        "Memory": "PLACEHOLDER",
+        "Display": "PLACEHOLDER",
+        "Operating Temperature": "PLACEHOLDER"
+      }
+    },
+    {
+      "title": "Authentication",
+      "items": {
+        "Fingerprint": "PLACEHOLDER",
+        "Face": "PLACEHOLDER",
+        "Card": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/biostation-3.pdf",
+  "relatedSlugs": ["xstation-2"],
+  "featured": true,
+  "sortOrder": 20,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}

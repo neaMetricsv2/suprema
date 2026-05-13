@@ -1,0 +1,29 @@
+{
+  "slug": "biomini-slim-3",
+  "categorySlug": "biometrics",
+  "name": "BioMini Slim 3",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "heroImage": "/assets/products/biomini-slim-3/hero.jpg",
+  "gallery": [],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "usb" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "Sensor": "PLACEHOLDER",
+        "Interface": "PLACEHOLDER",
+        "FAR": "PLACEHOLDER",
+        "FRR": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/biomini-slim-3.pdf",
+  "relatedSlugs": [],
+  "featured": false,
+  "sortOrder": 20,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}

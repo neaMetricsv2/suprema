@@ -1,0 +1,10 @@
+{
+  "slug": "government",
+  "name": "Government",
+  "tagLine": "PLACEHOLDER — short solution tagline.",
+  "body": "PLACEHOLDER markdown body. Replace with approved government solution copy from the partner kit.\n\nSecond paragraph here.",
+  "heroImage": "/assets/solutions/government/hero.jpg",
+  "relatedProductSlugs": ["xstation-2", "biostation-3", "bioentry-w3"],
+  "caseStudies": [],
+  "sortOrder": 5
+}

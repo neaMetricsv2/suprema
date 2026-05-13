@@ -1,0 +1,28 @@
+{
+  "slug": "facestation-2",
+  "categorySlug": "time-attendance",
+  "name": "FaceStation 2",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "heroImage": "/assets/products/facestation-2/hero.jpg",
+  "gallery": [],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "face" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "clock" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "Authentication": "PLACEHOLDER",
+        "Display": "PLACEHOLDER",
+        "Operating Temperature": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/facestation-2.pdf",
+  "relatedSlugs": ["biostation-a2"],
+  "featured": false,
+  "sortOrder": 20,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}

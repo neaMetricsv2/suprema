@@ -1,0 +1,28 @@
+{
+  "slug": "bioentry-w3",
+  "categorySlug": "access-control",
+  "name": "BioEntry W3",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "heroImage": "/assets/products/bioentry-w3/hero.jpg",
+  "gallery": [],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "wifi" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "CPU": "PLACEHOLDER",
+        "IP Rating": "PLACEHOLDER",
+        "Operating Temperature": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/bioentry-w3.pdf",
+  "relatedSlugs": [],
+  "featured": false,
+  "sortOrder": 30,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}
