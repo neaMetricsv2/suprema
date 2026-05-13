@@ -1,0 +1,17 @@
+{
+  "slug": "healthcare",
+  "name": "Healthcare",
+  "tagLine": "PLACEHOLDER — short solution tagline.",
+  "body": "PLACEHOLDER markdown body. Replace with approved healthcare solution copy from the partner kit.\n\nSecond paragraph here.",
+  "heroImage": "/assets/solutions/healthcare/hero.jpg",
+  "relatedProductSlugs": ["xstation-2", "biostation-a2"],
+  "caseStudies": [
+    {
+      "title": "PLACEHOLDER case study title",
+      "customer": "PLACEHOLDER customer name (with written permission)",
+      "summary": "1–2 sentence summary of the deployment and outcome.",
+      "url": null
+    }
+  ],
+  "sortOrder": 2
+}

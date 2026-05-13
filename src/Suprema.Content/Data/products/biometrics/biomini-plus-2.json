@@ -1,0 +1,30 @@
+{
+  "slug": "biomini-plus-2",
+  "categorySlug": "biometrics",
+  "name": "BioMini Plus 2",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit. Do not write original copy here.",
+  "heroImage": "/assets/products/biomini-plus-2/hero.jpg",
+  "gallery": [
+    "/assets/products/biomini-plus-2/gallery-01.jpg"
+  ],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "usb" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "Interface": "PLACEHOLDER",
+        "FAR": "PLACEHOLDER",
+        "FRR": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/biomini-plus-2.pdf",
+  "relatedSlugs": [],
+  "featured": false,
+  "sortOrder": 10,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}

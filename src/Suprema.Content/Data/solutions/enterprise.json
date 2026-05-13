@@ -1,0 +1,17 @@
+{
+  "slug": "enterprise",
+  "name": "Enterprise",
+  "tagLine": "PLACEHOLDER — short solution tagline.",
+  "body": "PLACEHOLDER markdown body. Replace with approved enterprise solution copy from the partner kit.\n\nSecond paragraph here.",
+  "heroImage": "/assets/solutions/enterprise/hero.jpg",
+  "relatedProductSlugs": ["xstation-2"],
+  "caseStudies": [
+    {
+      "title": "PLACEHOLDER case study title",
+      "customer": "PLACEHOLDER customer name (with written permission)",
+      "summary": "1–2 sentence summary of the deployment and outcome.",
+      "url": null
+    }
+  ],
+  "sortOrder": 1
+}

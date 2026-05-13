@@ -1,0 +1,30 @@
+{
+  "slug": "biostation-a2",
+  "categorySlug": "time-attendance",
+  "name": "BioStation A2",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit. Do not write original copy here.",
+  "heroImage": "/assets/products/biostation-a2/hero.jpg",
+  "gallery": [
+    "/assets/products/biostation-a2/gallery-01.jpg"
+  ],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "clock" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "CPU": "PLACEHOLDER",
+        "Memory": "PLACEHOLDER",
+        "Operating Temperature": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/biostation-a2.pdf",
+  "relatedSlugs": [],
+  "featured": true,
+  "sortOrder": 10,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}

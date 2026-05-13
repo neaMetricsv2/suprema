@@ -1,0 +1,10 @@
+{
+  "slug": "retail",
+  "name": "Retail",
+  "tagLine": "PLACEHOLDER — short solution tagline.",
+  "body": "PLACEHOLDER markdown body. Replace with approved retail solution copy from the partner kit.\n\nSecond paragraph here.",
+  "heroImage": "/assets/solutions/retail/hero.jpg",
+  "relatedProductSlugs": ["biostation-a2"],
+  "caseStudies": [],
+  "sortOrder": 3
+}

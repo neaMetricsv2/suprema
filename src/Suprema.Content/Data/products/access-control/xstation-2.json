@@ -1,0 +1,38 @@
+{
+  "slug": "xstation-2",
+  "categorySlug": "access-control",
+  "name": "XStation 2",
+  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
+  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit. Do not write original copy here.",
+  "heroImage": "/assets/products/xstation-2/hero.jpg",
+  "gallery": [
+    "/assets/products/xstation-2/gallery-01.jpg",
+    "/assets/products/xstation-2/gallery-02.jpg"
+  ],
+  "features": [
+    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
+    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "wifi" }
+  ],
+  "specs": [
+    {
+      "title": "General",
+      "items": {
+        "CPU": "PLACEHOLDER",
+        "Memory": "PLACEHOLDER",
+        "Operating Temperature": "PLACEHOLDER"
+      }
+    },
+    {
+      "title": "Connectivity",
+      "items": {
+        "Ethernet": "PLACEHOLDER",
+        "Wi-Fi": "PLACEHOLDER"
+      }
+    }
+  ],
+  "datasheetUrl": "/assets/datasheets/xstation-2.pdf",
+  "relatedSlugs": [],
+  "featured": true,
+  "sortOrder": 10,
+  "updatedUtc": "2026-05-01T00:00:00Z"
+}

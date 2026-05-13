@@ -1,0 +1,10 @@
+{
+  "slug": "education",
+  "name": "Education",
+  "tagLine": "PLACEHOLDER — short solution tagline.",
+  "body": "PLACEHOLDER markdown body. Replace with approved education solution copy from the partner kit.\n\nSecond paragraph here.",
+  "heroImage": "/assets/solutions/education/hero.jpg",
+  "relatedProductSlugs": ["xstation-2"],
+  "caseStudies": [],
+  "sortOrder": 4
+}
