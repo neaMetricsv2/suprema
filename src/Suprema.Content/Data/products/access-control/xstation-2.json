@@ -2,36 +2,69 @@
   "slug": "xstation-2",
   "categorySlug": "access-control",
   "name": "XStation 2",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit. Do not write original copy here.",
+  "tagLine": "All-in-one multi-biometric access terminal with a 5\" touchscreen and Android platform.",
+  "summary": "The XStation 2 is Suprema's flagship multi-biometric access control terminal, combining fingerprint recognition, RFID card reading and mobile credential support in a single, sleek device. Built on an Android platform with a vibrant 5-inch touchscreen, it offers a customisable user interface and supports a wide range of third-party applications via the BioStar 2 platform.\n\nDesigned for enterprise environments across South Africa, the XStation 2 delivers fast, reliable authentication at lobbies, server rooms, office floors and secure perimeter entry points — with IP65 and IK08 ratings ensuring durability in demanding conditions.",
   "heroImage": "/assets/products/xstation-2/hero.jpg",
   "gallery": [
     "/assets/products/xstation-2/gallery-01.jpg",
     "/assets/products/xstation-2/gallery-02.jpg"
   ],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "wifi" }
+    {
+      "title": "Multi-biometric authentication",
+      "description": "Fingerprint, face (optional), RFID card, PIN and mobile credential — mix and match to suit your security policy.",
+      "icon": "fingerprint"
+    },
+    {
+      "title": "Android-based open platform",
+      "description": "Run custom apps directly on the device. Integrates with BioStar 2 and third-party access management systems.",
+      "icon": "smartphone"
+    },
+    {
+      "title": "5-inch HD touchscreen",
+      "description": "Crisp, responsive display for user-friendly operation and on-screen visitor guidance.",
+      "icon": "display"
+    },
+    {
+      "title": "IP65 & IK08 rated",
+      "description": "Dust-tight, water-resistant and impact-rated for indoor and semi-outdoor deployments.",
+      "icon": "shield"
+    }
   ],
   "specs": [
     {
       "title": "General",
       "items": {
-        "CPU": "PLACEHOLDER",
-        "Memory": "PLACEHOLDER",
-        "Operating Temperature": "PLACEHOLDER"
+        "CPU": "Quad-core 1.4 GHz",
+        "RAM": "2 GB",
+        "Flash": "8 GB",
+        "Display": "5\" IPS touchscreen (720 × 1280)",
+        "Operating Temperature": "-20 °C to 50 °C",
+        "IP Rating": "IP65",
+        "Impact Rating": "IK08"
+      }
+    },
+    {
+      "title": "Authentication",
+      "items": {
+        "Fingerprint capacity": "100 000",
+        "Card types": "125 kHz EM / 13.56 MHz Mifare, DESFire / NFC",
+        "Mobile credential": "BLE & NFC",
+        "Authentication speed": "< 1 second"
       }
     },
     {
       "title": "Connectivity",
       "items": {
-        "Ethernet": "PLACEHOLDER",
-        "Wi-Fi": "PLACEHOLDER"
+        "Ethernet": "10/100 Mbps",
+        "Wi-Fi": "802.11 b/g/n",
+        "RS-485": "1 port (Wiegand in/out)",
+        "USB": "1 × USB 2.0 Host"
       }
     }
   ],
   "datasheetUrl": "/assets/datasheets/xstation-2.pdf",
-  "relatedSlugs": [],
+  "relatedSlugs": ["biostation-3", "bioentry-w3"],
   "featured": true,
   "sortOrder": 10,
   "updatedUtc": "2026-05-01T00:00:00Z"

@@ -2,26 +2,56 @@
   "slug": "bioentry-w3",
   "categorySlug": "access-control",
   "name": "BioEntry W3",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "tagLine": "Outdoor-rated fingerprint reader for perimeter and gate access.",
+  "summary": "The BioEntry W3 is Suprema's IP65-rated outdoor fingerprint access reader, engineered to perform reliably in South Africa's harsh outdoor environments — from sun-baked factory gates to rain-exposed building perimeters. Featuring Suprema's proven fingerprint algorithm and support for Wiegand and OSDP output, it integrates with virtually any access control panel on the market.\n\nCompact and vandal-resistant (IK09), the BioEntry W3 is the go-to choice for boom gates, turnstiles, car parks and secure facility perimeters where a ruggedised, standalone reader is required.",
   "heroImage": "/assets/products/bioentry-w3/hero.jpg",
   "gallery": [],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "wifi" }
+    {
+      "title": "IP65 weatherproof",
+      "description": "Fully dust-tight and protected against water jets — reliable in rain, dust and high UV environments.",
+      "icon": "cloud-rain"
+    },
+    {
+      "title": "IK09 vandal resistance",
+      "description": "Reinforced housing withstands impact and attempted tampering at exposed outdoor installations.",
+      "icon": "shield"
+    },
+    {
+      "title": "Universal controller integration",
+      "description": "Wiegand 26/34 and RS-485/OSDP outputs integrate with any third-party access controller.",
+      "icon": "plug"
+    },
+    {
+      "title": "Fast 1:N identification",
+      "description": "Identifies users from a database of up to 100 000 fingerprints in under 1 second.",
+      "icon": "fingerprint"
+    }
   ],
   "specs": [
     {
       "title": "General",
       "items": {
-        "CPU": "PLACEHOLDER",
-        "IP Rating": "PLACEHOLDER",
-        "Operating Temperature": "PLACEHOLDER"
+        "CPU": "Dual-core 1.0 GHz",
+        "Fingerprint capacity": "100 000",
+        "Operating Temperature": "-20 °C to 60 °C",
+        "IP Rating": "IP65",
+        "Impact Rating": "IK09",
+        "Dimensions": "72 × 130 × 37 mm"
+      }
+    },
+    {
+      "title": "Connectivity",
+      "items": {
+        "Output": "Wiegand 26/34, RS-485",
+        "OSDP": "v2",
+        "Relay": "1 × dry contact",
+        "Power": "PoE (802.3af) or 12 V DC"
       }
     }
   ],
   "datasheetUrl": "/assets/datasheets/bioentry-w3.pdf",
-  "relatedSlugs": [],
+  "relatedSlugs": ["biostation-3"],
   "featured": false,
   "sortOrder": 30,
   "updatedUtc": "2026-05-01T00:00:00Z"

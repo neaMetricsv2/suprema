@@ -2,28 +2,61 @@
   "slug": "biomini-plus-2",
   "categorySlug": "biometrics",
   "name": "BioMini Plus 2",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit. Do not write original copy here.",
+  "tagLine": "High-accuracy USB fingerprint scanner for enrolment and desktop verification.",
+  "summary": "The BioMini Plus 2 is a compact, high-performance USB fingerprint scanner designed for biometric enrolment stations, customer-facing kiosks and desktop identity verification. With a large 16 × 19 mm optical sensor and FBI PIV-certified algorithm, it captures high-quality fingerprint images even from dry, wet or worn fingers — a critical requirement in South Africa's diverse workforce population.\n\nPlug-and-play via USB, the BioMini Plus 2 ships with a comprehensive SDK supporting Windows, Linux and Android, making it straightforward to embed into HRMS, banking, KYC and government identity applications.",
   "heroImage": "/assets/products/biomini-plus-2/hero.jpg",
-  "gallery": [
-    "/assets/products/biomini-plus-2/gallery-01.jpg"
-  ],
+  "gallery": [],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "usb" }
+    {
+      "title": "FBI PIV certified",
+      "description": "Meets FBI Image Quality Specification (IQS) and FIPS 201 personal identity verification standards.",
+      "icon": "certificate"
+    },
+    {
+      "title": "Large optical sensor",
+      "description": "16 × 19 mm capture area handles all finger sizes with a 500 dpi resolution for crisp, detailed images.",
+      "icon": "fingerprint"
+    },
+    {
+      "title": "Dry, wet & worn finger support",
+      "description": "Advanced image processing ensures reliable capture across the full range of skin conditions.",
+      "icon": "hand"
+    },
+    {
+      "title": "Cross-platform SDK",
+      "description": "Comprehensive SDK for Windows, Linux and Android with sample code, documentation and technical support.",
+      "icon": "code"
+    }
   ],
   "specs": [
     {
-      "title": "General",
+      "title": "Sensor",
       "items": {
-        "Interface": "PLACEHOLDER",
-        "FAR": "PLACEHOLDER",
-        "FRR": "PLACEHOLDER"
+        "Type": "Optical",
+        "Capture area": "16 × 19 mm",
+        "Resolution": "500 dpi",
+        "Grayscale": "256 levels"
+      }
+    },
+    {
+      "title": "Performance",
+      "items": {
+        "FAR": "< 0.001%",
+        "FRR": "< 0.1%",
+        "Certification": "FBI PIV IQS"
+      }
+    },
+    {
+      "title": "Interface",
+      "items": {
+        "USB": "USB 2.0 Full Speed",
+        "OS Support": "Windows, Linux, Android",
+        "SDK": "Included"
       }
     }
   ],
   "datasheetUrl": "/assets/datasheets/biomini-plus-2.pdf",
-  "relatedSlugs": [],
+  "relatedSlugs": ["biomini-slim-3"],
   "featured": false,
   "sortOrder": 10,
   "updatedUtc": "2026-05-01T00:00:00Z"

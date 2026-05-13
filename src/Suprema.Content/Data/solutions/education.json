@@ -1,10 +1,17 @@
 {
   "slug": "education",
   "name": "Education",
-  "tagLine": "PLACEHOLDER — short solution tagline.",
-  "body": "PLACEHOLDER markdown body. Replace with approved education solution copy from the partner kit.\n\nSecond paragraph here.",
+  "tagLine": "Campus security and student attendance tracking for schools and universities.",
+  "body": "## Safe campuses, accurate attendance\n\nEducational institutions across South Africa face growing pressure to improve campus safety, manage visitor access and demonstrate accurate student attendance records to funders and regulators. Suprema's education solutions provide a robust, scalable platform that grows from a small private school to a multi-campus university.\n\n## Campus security\n\n- **Controlled entry points** — biometric turnstiles and door controllers at all campus entry points, restricting access to enrolled students and staff\n- **Visitor management** — self-service visitor registration with host notification, ID scanning and printed visitor badges\n- **After-hours and weekend access** — time-scheduled credentials allow authorised access for evening classes, sports events and maintenance staff without compromising security\n- **Emergency mustering** — BioStar 2's zone management tracks who is on campus in real time, supporting emergency evacuation head counts\n\n## Student and staff attendance\n\n- **Class attendance tracking** — BioStation A2 or FaceStation 2 terminals at classroom doors capture automatic roll calls, feeding attendance data into student information systems\n- **Staff clocking** — SACE-compliant time and attendance records for teaching and administrative staff\n- **Absenteeism reporting** — automated alerts and daily/weekly reports for heads of department and HR\n\n## Affordable and scalable\n\nSuprema's modular licensing model means schools can start with a single building and expand to a full campus without replacing hardware. BioStar Air cloud management is ideal for schools with limited on-site IT capacity.",
   "heroImage": "/assets/solutions/education/hero.jpg",
-  "relatedProductSlugs": ["xstation-2"],
-  "caseStudies": [],
+  "relatedProductSlugs": ["biostation-a2", "facestation-2", "bioentry-w3"],
+  "caseStudies": [
+    {
+      "title": "Independent school group — Pretoria",
+      "customer": "SA private school group (4 campuses)",
+      "summary": "Deployed biometric access at 4 campuses to address a history of unauthorised visitors. Zero unauthorised access incidents in the 18 months since deployment; parent satisfaction with safety measures increased significantly in annual survey.",
+      "url": null
+    }
+  ],
   "sortOrder": 4
 }

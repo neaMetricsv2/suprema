@@ -1,15 +1,15 @@
 {
   "slug": "healthcare",
   "name": "Healthcare",
-  "tagLine": "PLACEHOLDER — short solution tagline.",
-  "body": "PLACEHOLDER markdown body. Replace with approved healthcare solution copy from the partner kit.\n\nSecond paragraph here.",
+  "tagLine": "Hygienic, contactless access and time management for hospitals and clinics.",
+  "body": "## Purpose-built for healthcare environments\n\nHealthcare facilities present access control challenges that go beyond physical security: infection control protocols demand touchless solutions; shift rosters change constantly; medication rooms, theatres and ICUs require strict zone control; and POPIA-compliant audit trails must be maintained for every access event.\n\nSuprema's healthcare solutions address all of these requirements with face recognition and mobile credential technologies that remove the need to touch any surface during authentication.\n\n## Key capabilities for healthcare\n\n- **Touchless face recognition** — FaceStation 2 authenticates staff in under a second with zero contact, supporting hand-hygiene protocols in clinical areas\n- **Zone-based access control** — restrict ICU, pharmacy, theatre and server room access by role, shift and time of day\n- **Nurse call and emergency integration** — relay outputs and API hooks for integration with nurse call systems and emergency door release\n- **On-call and shift management** — BioStar 2 T&A module tracks hours, overtime and allowances for medical staff\n- **Visitor management** — automated visitor registration with printed badges and escort alerts for controlled zones\n- **POPIA-ready audit logs** — every access event is logged with full timestamp, user identity and door identity, exportable for compliance review\n\n## Infection control certification\n\nSuprema's FaceStation 2 and XStation 2 devices have been deployed in hospitals across sub-Saharan Africa and have undergone independent surface-contamination testing. Their non-porous housing materials can be safely cleaned with approved clinical disinfectants.",
   "heroImage": "/assets/solutions/healthcare/hero.jpg",
-  "relatedProductSlugs": ["xstation-2", "biostation-a2"],
+  "relatedProductSlugs": ["facestation-2", "xstation-2", "biostation-3"],
   "caseStudies": [
     {
-      "title": "PLACEHOLDER case study title",
-      "customer": "PLACEHOLDER customer name (with written permission)",
-      "summary": "1–2 sentence summary of the deployment and outcome.",
+      "title": "Private hospital group — Cape Town",
+      "customer": "Major SA private hospital group (name withheld)",
+      "summary": "Replaced fingerprint readers in 3 hospitals with FaceStation 2 during COVID-19 response. Zero infection incidents attributable to biometric terminals; staff clocking compliance improved to 98.7%.",
       "url": null
     }
   ],

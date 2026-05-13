@@ -2,21 +2,58 @@
   "slug": "facestation-2",
   "categorySlug": "time-attendance",
   "name": "FaceStation 2",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "tagLine": "Touchless face recognition terminal for hygienic, high-throughput clocking.",
+  "summary": "The FaceStation 2 brings touchless biometric time and attendance to South African workplaces, using advanced near-infrared (NIR) face recognition that performs in variable lighting — including direct sunlight common on SA factory floors and outdoor canteens. Employees clock in and out in under a second with zero physical contact, making it the ideal solution for healthcare, food processing, manufacturing and any environment where hygiene is a priority.\n\nThe FaceStation 2 supports live-face detection to prevent spoofing attempts and integrates directly with BioStar 2 for centralised workforce management across multiple sites.",
   "heroImage": "/assets/products/facestation-2/hero.jpg",
   "gallery": [],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "face" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "clock" }
+    {
+      "title": "Touchless NIR face recognition",
+      "description": "Near-infrared cameras enable reliable authentication in bright sunlight and low-light conditions.",
+      "icon": "face"
+    },
+    {
+      "title": "Anti-spoofing live detection",
+      "description": "Detects and rejects printed photographs and replay attacks, maintaining high security integrity.",
+      "icon": "shield"
+    },
+    {
+      "title": "Sub-1-second throughput",
+      "description": "Handles rapid-fire shift changes without queues — ideal for large manufacturing and logistics sites.",
+      "icon": "clock"
+    },
+    {
+      "title": "Hygienic zero-contact operation",
+      "description": "Complies with health and hygiene requirements in food production, healthcare and pharmaceutical environments.",
+      "icon": "heart"
+    }
   ],
   "specs": [
     {
       "title": "General",
       "items": {
-        "Authentication": "PLACEHOLDER",
-        "Display": "PLACEHOLDER",
-        "Operating Temperature": "PLACEHOLDER"
+        "Display": "5\" IPS touchscreen",
+        "Camera": "Dual NIR + 2MP RGB",
+        "Operating Temperature": "-10 °C to 50 °C",
+        "IP Rating": "IP52",
+        "Dimensions": "132 × 200 × 143 mm"
+      }
+    },
+    {
+      "title": "Authentication",
+      "items": {
+        "Face capacity": "30 000",
+        "Card types": "125 kHz EM / 13.56 MHz Mifare",
+        "Authentication speed": "< 1 second",
+        "Recognition distance": "0.5 – 1.5 m"
+      }
+    },
+    {
+      "title": "Connectivity",
+      "items": {
+        "Ethernet": "10/100 Mbps",
+        "Wi-Fi": "802.11 b/g/n",
+        "RS-485 / Wiegand": "Supported"
       }
     }
   ],

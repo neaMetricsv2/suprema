@@ -1,10 +1,17 @@
 {
   "slug": "retail",
   "name": "Retail",
-  "tagLine": "PLACEHOLDER — short solution tagline.",
-  "body": "PLACEHOLDER markdown body. Replace with approved retail solution copy from the partner kit.\n\nSecond paragraph here.",
+  "tagLine": "Accurate workforce management and secure back-of-house access for retail operations.",
+  "body": "## The retail challenge\n\nSouth African retail operations juggle high staff turnover, complex shift patterns, multi-site management and the ever-present threat of internal theft. Suprema's retail solutions tackle all three with biometric time and attendance that cannot be shared or forged, and access control that limits after-hours back-of-house entry to authorised personnel only.\n\n## Workforce management for retail\n\n- **Ghost employee prevention** — biometric clocking eliminates buddy-punching and time fraud, directly impacting payroll accuracy\n- **Shift scheduling and overtime tracking** — BioStar 2's T&A module integrates with VIP Payroll, Sage 300 and PaySpace for automated payroll export\n- **Multi-site centralisation** — manage time and attendance across all branches from head office, with site-by-site drill-down reporting\n- **Public holiday and roster calendars** — South African public holiday calendars pre-loaded, with custom shift pattern support\n\n## Back-of-house security\n\n- **Stock room and cash office access** — restrict high-value areas to named individuals with time-limited credentials\n- **Loading bay control** — BioEntry W3 weatherproof readers handle outdoor loading dock access in all weather conditions\n- **Loss prevention integration** — access event data feeds into LP dashboards, correlating door activity with POS transactions\n\n## Rapid deployment\n\nFor retail rollouts across multiple branches, Suprema's cloud-based BioStar Air option enables remote device provisioning and management without on-site IT infrastructure — critical for stores in smaller towns across South Africa.",
   "heroImage": "/assets/solutions/retail/hero.jpg",
-  "relatedProductSlugs": ["biostation-a2"],
-  "caseStudies": [],
+  "relatedProductSlugs": ["biostation-a2", "bioentry-w3", "facestation-2"],
+  "caseStudies": [
+    {
+      "title": "National fashion retailer — 120 branches",
+      "customer": "SA national retail group (name withheld)",
+      "summary": "Rolled out BioStation A2 terminals across 120 branches, integrating with existing Sage payroll. Payroll query rate fell 67%; overtime fraud identified and eliminated in the first month, generating positive ROI in under 90 days.",
+      "url": null
+    }
+  ],
   "sortOrder": 3
 }

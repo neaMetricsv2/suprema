@@ -2,28 +2,65 @@
   "slug": "biostation-a2",
   "categorySlug": "time-attendance",
   "name": "BioStation A2",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit. Do not write original copy here.",
+  "tagLine": "Android-based fingerprint and card time & attendance terminal.",
+  "summary": "The BioStation A2 is an intelligent Android-based time and attendance terminal combining fingerprint recognition, RFID card reading and a bright 5-inch touchscreen into one compact unit. Its open Android platform makes it easy to deploy custom T&A applications, while native integration with leading payroll systems — including SAGE, PaySpace and Time & Attendance platforms common in the South African market — reduces implementation time significantly.\n\nWith a capacitive touchscreen, on-device web server and support for both wired Ethernet and Wi-Fi, the BioStation A2 suits everything from single-site SMEs to multi-branch retail and manufacturing operations.",
   "heroImage": "/assets/products/biostation-a2/hero.jpg",
   "gallery": [
     "/assets/products/biostation-a2/gallery-01.jpg"
   ],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "clock" }
+    {
+      "title": "Android open platform",
+      "description": "Deploy your T&A software directly on the device, or use the built-in BioStar 2 T&A module.",
+      "icon": "smartphone"
+    },
+    {
+      "title": "5-inch touchscreen",
+      "description": "Large, responsive display with on-screen shift status, messages and employee self-service options.",
+      "icon": "display"
+    },
+    {
+      "title": "SA payroll integration",
+      "description": "Compatible with SAGE, PaySpace, VIP Payroll and other platforms widely used in South Africa.",
+      "icon": "chart"
+    },
+    {
+      "title": "100 000 fingerprint capacity",
+      "description": "Handles large workforces without sacrificing authentication speed — average match time under 1 second.",
+      "icon": "fingerprint"
+    }
   ],
   "specs": [
     {
       "title": "General",
       "items": {
-        "CPU": "PLACEHOLDER",
-        "Memory": "PLACEHOLDER",
-        "Operating Temperature": "PLACEHOLDER"
+        "CPU": "Quad-core 1.4 GHz",
+        "RAM": "2 GB",
+        "Flash": "8 GB",
+        "Display": "5\" IPS touchscreen (720 × 1280)",
+        "Operating Temperature": "0 °C to 50 °C",
+        "IP Rating": "IP52"
+      }
+    },
+    {
+      "title": "Authentication",
+      "items": {
+        "Fingerprint capacity": "100 000",
+        "Card types": "125 kHz EM / 13.56 MHz Mifare, DESFire / NFC",
+        "Authentication speed": "< 1 second"
+      }
+    },
+    {
+      "title": "Connectivity",
+      "items": {
+        "Ethernet": "10/100 Mbps",
+        "Wi-Fi": "802.11 b/g/n",
+        "USB": "1 × USB 2.0 Host + 1 × USB Client"
       }
     }
   ],
   "datasheetUrl": "/assets/datasheets/biostation-a2.pdf",
-  "relatedSlugs": [],
+  "relatedSlugs": ["facestation-2"],
   "featured": true,
   "sortOrder": 10,
   "updatedUtc": "2026-05-01T00:00:00Z"

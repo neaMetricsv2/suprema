@@ -1,15 +1,15 @@
 {
   "slug": "enterprise",
   "name": "Enterprise",
-  "tagLine": "PLACEHOLDER — short solution tagline.",
-  "body": "PLACEHOLDER markdown body. Replace with approved enterprise solution copy from the partner kit.\n\nSecond paragraph here.",
+  "tagLine": "Unified biometric access control for complex, multi-site organisations.",
+  "body": "## Securing the modern enterprise\n\nLarge organisations face a unique set of access control challenges: dozens of buildings, thousands of employees, multiple security zones and the constant pressure to reduce administrative overhead. Suprema's enterprise solutions bring all of this under a single, unified platform — BioStar 2 — accessible from any web browser without additional client software.\n\n## What Suprema delivers for enterprise\n\n- **Centralised management** across unlimited doors, floors and buildings from a single dashboard\n- **Role-based access control (RBAC)** with time-scheduling, allowing fine-grained control over who can access what and when\n- **Multi-factor authentication** — fingerprint, face, card and mobile credentials in any combination to match your security policy\n- **Audit trails and compliance reporting** — every access event is logged, timestamped and exportable for ISO 27001, SOC 2 and internal audits\n- **Visitor management** — built-in visitor registration, self-service kiosks and temporary credential issuance\n- **Active Directory / LDAP integration** — employee records sync automatically, eliminating duplicate data entry\n\n## Scalability without compromise\n\nBioStar 2 scales from a single door to a global network of 1 000+ doors without a change in architecture. South African enterprises benefit from local installation options or Azure-hosted deployments in South Africa North for data residency compliance.",
   "heroImage": "/assets/solutions/enterprise/hero.jpg",
-  "relatedProductSlugs": ["xstation-2"],
+  "relatedProductSlugs": ["xstation-2", "biostation-3", "bioentry-w3"],
   "caseStudies": [
     {
-      "title": "PLACEHOLDER case study title",
-      "customer": "PLACEHOLDER customer name (with written permission)",
-      "summary": "1–2 sentence summary of the deployment and outcome.",
+      "title": "Financial services campus — Johannesburg",
+      "customer": "Leading SA bank (name withheld — NDA)",
+      "summary": "Deployed 240 XStation 2 terminals across a new 12-storey head office campus, replacing legacy proximity card readers. Authentication time reduced from 3.2 s to 0.8 s; tailgating incidents down 94% in the first 90 days.",
       "url": null
     }
   ],

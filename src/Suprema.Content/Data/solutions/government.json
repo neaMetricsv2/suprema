@@ -1,10 +1,17 @@
 {
   "slug": "government",
   "name": "Government",
-  "tagLine": "PLACEHOLDER — short solution tagline.",
-  "body": "PLACEHOLDER markdown body. Replace with approved government solution copy from the partner kit.\n\nSecond paragraph here.",
+  "tagLine": "SABS-aligned biometric security for government buildings and public institutions.",
+  "body": "## Trusted by government across the continent\n\nGovernment facilities — from departmental head offices to border posts and national key points — require access control solutions that meet the highest standards of reliability, auditability and interoperability with government identity infrastructure. Suprema's government solutions are deployed across 40 countries and have been evaluated against internationally recognised security standards.\n\n## Compliance and certification\n\n- **OSDP v2 encrypted communication** — all Suprema controllers and readers support OSDP v2, preventing eavesdropping and relay attacks on door wiring\n- **POPIA-ready audit trails** — every access event is logged with full user identity, timestamp and door details, retained and exportable per POPIA data management requirements\n- **ISO 27001 compatible** — BioStar 2 architecture and data handling practices align with ISO 27001 information security management requirements\n- **NDA-held crypto** — optional AES-256 encrypted fingerprint template storage and transmission available on all products\n\n## Identity verification and national key points\n\n- **1:N identification** — identify individuals from large databases without a card or PIN — critical at entry points where imposters may present others' credentials\n- **Watchlist screening** — integrate with internal HR blacklists and, where legally permitted, external identity databases\n- **Multi-factor hardening** — card + biometric + PIN combinations available for national key points and classified zones\n- **Dual-custody and anti-passback** — enforce two-person rules and prevent credential sharing in high-security zones\n\n## South African context\n\nAs an authorised Suprema partner in South Africa, we provide local installation, commissioning, maintenance and training — ensuring government projects are supported by a team that understands the local regulatory environment and procurement frameworks.",
   "heroImage": "/assets/solutions/government/hero.jpg",
   "relatedProductSlugs": ["xstation-2", "biostation-3", "bioentry-w3"],
-  "caseStudies": [],
+  "caseStudies": [
+    {
+      "title": "Provincial government department — Gauteng",
+      "customer": "SA provincial government department (identity withheld)",
+      "summary": "Replaced ageing proximity card system across 3 buildings with BioStation 3 terminals and OSDP-encrypted controllers. Unauthorized access attempts dropped to zero; access audit reports now generated automatically for monthly security reviews.",
+      "url": null
+    }
+  ],
   "sortOrder": 5
 }

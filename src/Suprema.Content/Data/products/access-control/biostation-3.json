@@ -2,39 +2,68 @@
   "slug": "biostation-3",
   "categorySlug": "access-control",
   "name": "BioStation 3",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "tagLine": "Next-generation fingerprint and face recognition access terminal.",
+  "summary": "The BioStation 3 sets a new benchmark for biometric access control, integrating Suprema's latest deep-learning fingerprint algorithm with an advanced IR face recognition engine in a compact, modern design. With a 4.3-inch colour touchscreen and support for both on-premise (BioStar 2) and cloud (BioStar Air) management, the BioStation 3 adapts to any deployment model.\n\nIdeal for high-traffic entry points where speed and hygiene matter — the BioStation 3 authenticates users in under a second, with anti-spoofing technology that rejects printed photos and 3D masks.",
   "heroImage": "/assets/products/biostation-3/hero.jpg",
   "gallery": [
     "/assets/products/biostation-3/gallery-01.jpg",
     "/assets/products/biostation-3/gallery-02.jpg"
   ],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "face" },
-    { "title": "PLACEHOLDER feature 3", "description": "From approved kit.", "icon": "lock" }
+    {
+      "title": "Deep-learning fingerprint algorithm",
+      "description": "Suprema's 5th-generation algorithm delivers class-leading accuracy even on worn or damaged fingerprints.",
+      "icon": "fingerprint"
+    },
+    {
+      "title": "IR face recognition",
+      "description": "Anti-spoofing IR face authentication works in direct sunlight and low light — no masks required.",
+      "icon": "face"
+    },
+    {
+      "title": "BioStar 2 & BioStar Air ready",
+      "description": "Supports both on-premise and cloud-based access management out of the box.",
+      "icon": "cloud"
+    },
+    {
+      "title": "OSDP v2 support",
+      "description": "Encrypted, bidirectional communication with access controllers for maximum security.",
+      "icon": "lock"
+    }
   ],
   "specs": [
     {
       "title": "General",
       "items": {
-        "CPU": "PLACEHOLDER",
-        "Memory": "PLACEHOLDER",
-        "Display": "PLACEHOLDER",
-        "Operating Temperature": "PLACEHOLDER"
+        "CPU": "Quad-core 1.3 GHz",
+        "RAM": "1 GB",
+        "Display": "4.3\" colour TFT touchscreen",
+        "Operating Temperature": "-20 °C to 50 °C",
+        "IP Rating": "IP65",
+        "Dimensions": "135 × 130 × 34 mm"
       }
     },
     {
       "title": "Authentication",
       "items": {
-        "Fingerprint": "PLACEHOLDER",
-        "Face": "PLACEHOLDER",
-        "Card": "PLACEHOLDER"
+        "Fingerprint capacity": "100 000",
+        "Face capacity": "30 000",
+        "Card types": "125 kHz EM / 13.56 MHz Mifare, DESFire",
+        "Authentication speed": "< 1 second"
+      }
+    },
+    {
+      "title": "Connectivity",
+      "items": {
+        "Ethernet": "10/100 Mbps",
+        "Wi-Fi": "802.11 b/g/n (optional)",
+        "RS-485 / Wiegand": "Supported",
+        "OSDP": "v2"
       }
     }
   ],
   "datasheetUrl": "/assets/datasheets/biostation-3.pdf",
-  "relatedSlugs": ["xstation-2"],
+  "relatedSlugs": ["xstation-2", "bioentry-w3"],
   "featured": true,
   "sortOrder": 20,
   "updatedUtc": "2026-05-01T00:00:00Z"

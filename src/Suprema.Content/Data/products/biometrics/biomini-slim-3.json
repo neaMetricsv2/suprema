@@ -2,27 +2,61 @@
   "slug": "biomini-slim-3",
   "categorySlug": "biometrics",
   "name": "BioMini Slim 3",
-  "tagLine": "PLACEHOLDER — short tagline from approved copy.",
-  "summary": "PLACEHOLDER — 1–2 paragraph product summary from the approved partner kit.",
+  "tagLine": "Ultra-slim USB fingerprint scanner for space-constrained integrations.",
+  "summary": "The BioMini Slim 3 packs FBI-certified fingerprint scanning into an exceptionally slim, lightweight form factor — making it the preferred choice for narrow POS counters, laptop docking stations, turnstile control cabinets and embedded kiosk integrations where every millimetre counts.\n\nDespite its compact profile, the BioMini Slim 3 maintains the high image quality and algorithmic accuracy that Suprema is known for, with full SDK compatibility shared with the BioMini Plus 2, allowing developers to swap between form factors with minimal code changes.",
   "heroImage": "/assets/products/biomini-slim-3/hero.jpg",
   "gallery": [],
   "features": [
-    { "title": "PLACEHOLDER feature 1", "description": "From approved kit.", "icon": "fingerprint" },
-    { "title": "PLACEHOLDER feature 2", "description": "From approved kit.", "icon": "usb" }
+    {
+      "title": "Ultra-slim design",
+      "description": "Only 12 mm thick — fits seamlessly into tight integration spaces without compromising on sensor quality.",
+      "icon": "ruler"
+    },
+    {
+      "title": "FBI PIV certified",
+      "description": "Meets FBI IQS and FIPS 201 standards for government and high-security commercial applications.",
+      "icon": "certificate"
+    },
+    {
+      "title": "Shared SDK with BioMini Plus 2",
+      "description": "Switch between BioMini models with no API changes — future-proof your integration.",
+      "icon": "code"
+    },
+    {
+      "title": "Plug-and-play USB",
+      "description": "No driver installation required on modern Windows and Linux systems — ready in seconds.",
+      "icon": "plug"
+    }
   ],
   "specs": [
     {
-      "title": "General",
+      "title": "Sensor",
       "items": {
-        "Sensor": "PLACEHOLDER",
-        "Interface": "PLACEHOLDER",
-        "FAR": "PLACEHOLDER",
-        "FRR": "PLACEHOLDER"
+        "Type": "Optical",
+        "Capture area": "12.8 × 18 mm",
+        "Resolution": "500 dpi",
+        "Thickness": "12 mm"
+      }
+    },
+    {
+      "title": "Performance",
+      "items": {
+        "FAR": "< 0.001%",
+        "FRR": "< 0.1%",
+        "Certification": "FBI PIV IQS"
+      }
+    },
+    {
+      "title": "Interface",
+      "items": {
+        "USB": "USB 2.0 Full Speed",
+        "OS Support": "Windows, Linux, Android",
+        "SDK": "Included"
       }
     }
   ],
   "datasheetUrl": "/assets/datasheets/biomini-slim-3.pdf",
-  "relatedSlugs": [],
+  "relatedSlugs": ["biomini-plus-2"],
   "featured": false,
   "sortOrder": 20,
   "updatedUtc": "2026-05-01T00:00:00Z"
