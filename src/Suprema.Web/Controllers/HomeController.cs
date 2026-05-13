@@ -1,24 +1,19 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Suprema.Web.Models;
+using Suprema.Core.Abstractions;
+using Suprema.Web.ViewModels;
 
 namespace Suprema.Web.Controllers;
 
-public class HomeController : Controller
+public sealed class HomeController(IContentService content) : Controller
 {
-    public IActionResult Index()
+    public IActionResult Index() => View(new HomeViewModel
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+        FeaturedProducts = content.GetFeaturedProducts(4),
+        Categories       = content.GetCategories(),
+        Solutions        = content.GetSolutions(),
+        LatestArticles   = content.GetArticles(3)
+    });
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+    public IActionResult Error() => View();
 }

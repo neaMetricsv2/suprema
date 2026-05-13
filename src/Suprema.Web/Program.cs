@@ -1,29 +1,71 @@
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using Suprema.Content.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization()
+    .AddDataAnnotationsLocalization();
+
+builder.Services.AddLocalization(o => o.ResourcesPath = "Resources");
+
+var contentRoot = Path.Combine(builder.Environment.ContentRootPath, "..", "Suprema.Content", "Data");
+builder.Services.AddSupremaContent(Path.GetFullPath(contentRoot));
+
+// Localization plumbing — en-ZA only for v1, ready for af-ZA / zu-ZA
+var supportedCultures = new[] { new CultureInfo("en-ZA") };
+builder.Services.Configure<RequestLocalizationOptions>(o =>
+{
+    o.DefaultRequestCulture = new RequestCulture("en-ZA");
+    o.SupportedCultures = supportedCultures;
+    o.SupportedUICultures = supportedCultures;
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Eagerly initialise ContentService so startup counts are logged immediately
+_ = app.Services.GetRequiredService<Suprema.Core.Abstractions.IContentService>();
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
-
+app.UseRequestLocalization();
 app.UseAuthorization();
 
-app.MapStaticAssets();
+app.MapControllerRoute(
+    name: "product-detail",
+    pattern: "products/{category}/{slug}",
+    defaults: new { controller = "Products", action = "Detail" });
+
+app.MapControllerRoute(
+    name: "product-category",
+    pattern: "products/{category}",
+    defaults: new { controller = "Products", action = "Category" });
+
+app.MapControllerRoute(
+    name: "solution-detail",
+    pattern: "solutions/{slug}",
+    defaults: new { controller = "Solutions", action = "Detail" });
+
+app.MapControllerRoute(
+    name: "article",
+    pattern: "news/{slug}",
+    defaults: new { controller = "News", action = "Article" });
+
+app.MapControllerRoute(
+    name: "legal",
+    pattern: "legal/{slug}",
+    defaults: new { controller = "Legal", action = "Show" });
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

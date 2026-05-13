@@ -1,8 +1,49 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Suprema South Africa";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Suprema South Africa</h1>
+    <p class="lead">PLACEHOLDER — approved hero copy goes here.</p>
 </div>
+
+<section class="py-4">
+    <h2>Product Categories (@Model.Categories.Count)</h2>
+    <ul>
+        @foreach (var cat in Model.Categories)
+        {
+            <li><a href="/products/@cat.Slug">@cat.Name</a></li>
+        }
+    </ul>
+</section>
+
+<section class="py-4">
+    <h2>Featured Products (@Model.FeaturedProducts.Count)</h2>
+    <ul>
+        @foreach (var p in Model.FeaturedProducts)
+        {
+            <li>@p.Name — @p.TagLine</li>
+        }
+    </ul>
+</section>
+
+<section class="py-4">
+    <h2>Solutions (@Model.Solutions.Count)</h2>
+    <ul>
+        @foreach (var s in Model.Solutions)
+        {
+            <li><a href="/solutions/@s.Slug">@s.Name</a></li>
+        }
+    </ul>
+</section>
+
+<section class="py-4">
+    <h2>Latest News (@Model.LatestArticles.Count)</h2>
+    <ul>
+        @foreach (var a in Model.LatestArticles)
+        {
+            <li><a href="/news/@a.Slug">@a.Title</a></li>
+        }
+    </ul>
+</section>
