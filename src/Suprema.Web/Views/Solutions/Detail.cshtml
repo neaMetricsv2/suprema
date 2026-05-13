@@ -8,9 +8,29 @@
         .Where(p => p is not null)
         .Cast<Product>()
         .ToList();
+    var productImages = new System.Collections.Generic.Dictionary<string, string>
+    {
+        ["xstation-2"]    = "/assets/products/xstation-2.png",
+        ["biostation-3"]  = "/assets/products/biostation-3.png",
+        ["bioentry-w3"]   = "/assets/products/bioentry-w3.png",
+        ["biostation-a2"] = "/assets/products/biostation-a2.png",
+        ["facestation-2"] = "/assets/products/facestation-2.png",
+        ["biomini-plus-2"]= "/assets/products/biomini-plus-2.png",
+        ["biomini-slim-3"]= "/assets/products/biomini-slim-3.png"
+    };
+    var solImages = new System.Collections.Generic.Dictionary<string, string>
+    {
+        ["enterprise"]  = "/assets/images/bg_commercial.jpg",
+        ["healthcare"]  = "/assets/images/bg_healthcare.jpg",
+        ["retail"]      = "/assets/images/bg_commercial.jpg",
+        ["education"]   = "/assets/images/bg_infrastructure.jpg",
+        ["government"]  = "/assets/images/bg_datacenter.jpg"
+    };
+    solImages.TryGetValue(Model.Slug, out var heroBg);
 }
 
-<section class="page-hero">
+@* ── Hero ────────────────────────────────────────────────────────────────────── *@
+<section class="page-hero" style="@(!string.IsNullOrEmpty(heroBg) ? $"background-image:url('{heroBg}');" : "")">
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -20,71 +40,102 @@
       </ol>
     </nav>
     <h1>@Model.Name</h1>
-    <p class="text-muted mb-0">@Model.TagLine</p>
+    <p class="page-hero-sub">@Model.TagLine</p>
+    <a class="btn-suprema mt-2" asp-controller="Contact" asp-action="Index">@L["Nav.RequestQuote"]</a>
   </div>
 </section>
 
-<section class="py-5">
+@* ── Body ─────────────────────────────────────────────────────────────────────── *@
+<section class="section-lg">
   <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-7">
-        <div class="article-body">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="article-body reveal">
           @Html.Raw(Markdown.ToHtml(Model.Body, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
         </div>
       </div>
-      <div class="col-lg-4 offset-lg-1">
-        <div class="card border-0 shadow-sm p-4 mb-4">
-          <h6 class="fw-bold text-suprema text-uppercase mb-3" style="letter-spacing:.06em;font-size:.8rem;">Get Started</h6>
-          <p class="text-muted small mb-3">PLACEHOLDER — solution sidebar CTA.</p>
-          <a class="btn btn-suprema w-100" asp-controller="Contact" asp-action="Index">@L["Nav.RequestQuote"]</a>
-        </div>
-      </div>
     </div>
+  </div>
+</section>
 
-    @* Related products *@
-    @if (relatedProducts.Count > 0)
-    {
-      <hr class="my-4" />
-      <h4 class="section-title mb-3">@L["Solutions.RelatedProducts"]</h4>
-      <div class="row g-3">
+@* ── Related products ────────────────────────────────────────────────────────── *@
+@if (relatedProducts.Count > 0)
+{
+  <section id="related-products" class="section-lg section-light">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-divider"></div>
+        <h2 class="section-title">@L["Solutions.RelatedProducts"]</h2>
+        <p class="section-subtitle">Suprema hardware recommended for @Model.Name deployments</p>
+      </div>
+      <div class="row g-4 justify-content-center">
         @foreach (var p in relatedProducts)
         {
-          <div class="col-sm-6 col-lg-3">
+          productImages.TryGetValue(p.Slug, out var pImg);
+          <div class="col-sm-6 col-lg-3 reveal">
             <div class="card card-product h-100">
-              <div class="card-body">
-                <span class="card-tag mb-2 d-inline-block">@p.CategorySlug.Replace("-"," ")</span>
+              <div class="card-img-top">
+                @if (!string.IsNullOrEmpty(pImg))
+                { <img src="@pImg" alt="@p.Name" /> }
+                else
+                { <span class="text-muted small" style="opacity:.4;">@p.Name</span> }
+              </div>
+              <div class="card-body px-3 pt-3 pb-2">
+                <span class="card-tag mb-2 d-inline-block">@p.CategorySlug.Replace("-", " ")</span>
                 <h6 class="card-title">@p.Name</h6>
-                <p class="text-muted small">@p.TagLine</p>
+                <p style="font-size:.82rem;color:var(--sup-muted);font-weight:300;">@p.TagLine</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 px-3 pb-3">
                 <a href="/products/@p.CategorySlug/@p.Slug"
-                   class="btn btn-outline-suprema btn-sm">@L["Common.LearnMore"]</a>
+                   class="btn-outline-suprema btn-sm w-100 justify-content-center">@L["Common.LearnMore"]</a>
               </div>
             </div>
           </div>
         }
       </div>
-    }
+    </div>
+  </section>
+}
 
-    @* Case studies *@
-    @if (Model.CaseStudies.Count > 0)
-    {
-      <hr class="my-4" />
-      <h4 class="section-title mb-3">@L["Solutions.CaseStudies"]</h4>
-      <div class="row g-4">
+@* ── Case studies ────────────────────────────────────────────────────────────── *@
+@if (Model.CaseStudies.Count > 0)
+{
+  <section class="section-lg">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-divider"></div>
+        <h2 class="section-title">@L["Solutions.CaseStudies"]</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
         @foreach (var cs in Model.CaseStudies)
         {
-          <div class="col-md-6">
-            <div class="card border-0 bg-suprema-light p-4 h-100">
-              <p class="fw-bold mb-1">@cs.Title</p>
-              <p class="text-muted small mb-1">@cs.Customer</p>
-              <p class="small mb-0">@cs.Summary</p>
+          <div class="col-md-6 reveal">
+            <div class="h-100 p-4" style="background:var(--sup-bg-light);border-radius:14px;border-left:4px solid var(--sup-primary);">
+              <p class="fw-bold mb-1" style="color:var(--sup-text);">@cs.Title</p>
+              <p style="font-size:.82rem;color:var(--sup-primary);font-weight:600;text-transform:uppercase;letter-spacing:.05em;">@cs.Customer</p>
+              <p style="font-size:.9rem;color:var(--sup-muted);line-height:1.7;font-weight:300;">@cs.Summary</p>
               @if (cs.Url is not null)
               {
-                <a href="@cs.Url" class="btn btn-outline-suprema btn-sm mt-3" target="_blank" rel="noopener">Read Case Study</a>
+                <a href="@cs.Url" class="btn-outline-suprema btn-sm mt-2" target="_blank" rel="noopener">Read Case Study</a>
               }
             </div>
           </div>
         }
       </div>
-    }
+    </div>
+  </section>
+}
+
+@* ── CTA ─────────────────────────────────────────────────────────────────────── *@
+<section class="cta-strip section-md text-center text-white">
+  <div class="container reveal">
+    <h3 class="fw-bold mb-3" style="font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-0.025em;">
+      Ready to deploy a @Model.Name solution?
+    </h3>
+    <p class="mb-4" style="opacity:.75;font-weight:300;">Our South Africa team responds within one business day.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a class="btn-suprema" asp-controller="Contact" asp-action="Index">@L["Nav.RequestQuote"]</a>
+      <a class="btn-outline-white" asp-controller="Products" asp-action="Index">View All Products</a>
+    </div>
   </div>
 </section>

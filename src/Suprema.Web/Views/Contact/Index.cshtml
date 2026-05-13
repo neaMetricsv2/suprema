@@ -12,45 +12,51 @@
       </ol>
     </nav>
     <h1>@L["Contact.Title"]</h1>
-    <p class="text-muted mb-0">@L["Contact.Intro"]</p>
+    <p class="page-hero-sub">@L["Contact.Intro"]</p>
   </div>
 </section>
 
-<section class="py-5">
+<section class="section-lg">
   <div class="container">
     <div class="row g-5">
 
       @* Contact details *@
       <div class="col-lg-4">
-        <h5 class="fw-bold text-suprema mb-4">Get in touch</h5>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <strong>Address</strong><br />
-            PLACEHOLDER — registered address<br />Johannesburg, South Africa
-          </li>
-          <li class="mb-3">
-            <strong>Tel</strong><br />
-            <a href="tel:+27XXXXXXXXXX">+27 (0)XX XXX XXXX</a>
-          </li>
-          <li class="mb-3">
-            <strong>Email</strong><br />
-            <a href="mailto:info@suprema.co.za">info@suprema.co.za</a>
-          </li>
-          <li class="mb-3">
-            <strong>Support hours (SAST)</strong><br />
-            @L["Footer.SupportHours"]
-          </li>
-        </ul>
-        <div class="alert alert-info small mt-4">
-          For technical support, visit
-          <a href="https://support.supremainc.com" target="_blank" rel="noopener">Suprema Global Support</a>.
+        <div class="reveal">
+          <div class="section-divider"></div>
+          <h4 class="fw-bold mb-4" style="font-size:1.3rem;">Get in touch</h4>
+        </div>
+
+        <div class="d-flex flex-column gap-4">
+          <div class="reveal reveal-delay-1">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sup-primary);font-weight:600;margin-bottom:.35rem;">Address</p>
+            <p style="color:var(--sup-muted);font-weight:300;line-height:1.7;margin:0;">
+              Johannesburg, South Africa
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sup-primary);font-weight:600;margin-bottom:.35rem;">Email</p>
+            <a href="mailto:info@suprema.co.za" style="color:var(--sup-text);font-weight:500;">info@suprema.co.za</a>
+          </div>
+          <div class="reveal reveal-delay-3">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sup-primary);font-weight:600;margin-bottom:.35rem;">Support Hours (SAST)</p>
+            <p style="color:var(--sup-muted);font-weight:300;margin:0;">@L["Footer.SupportHours"]</p>
+          </div>
+          <div class="reveal reveal-delay-4">
+            <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sup-primary);font-weight:600;margin-bottom:.35rem;">Technical Support</p>
+            <p style="color:var(--sup-muted);font-weight:300;margin:0;">
+              For product technical support, visit
+              <a href="https://support.supremainc.com" target="_blank" rel="noopener" style="color:var(--sup-primary);">Suprema Global Support</a>.
+            </p>
+          </div>
         </div>
       </div>
 
       @* Contact form *@
-      <div class="col-lg-7 offset-lg-1">
+      <div class="col-lg-7 offset-lg-1 reveal">
         <div class="contact-box">
-          <h5 class="fw-bold text-suprema mb-4">Send us a message</h5>
+          <div class="section-divider"></div>
+          <h4 class="fw-bold mb-4" style="font-size:1.3rem;">Send us a message</h4>
           <form asp-controller="Contact" asp-action="Index" method="post">
             @Html.AntiForgeryToken()
             <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
@@ -58,7 +64,7 @@
             <div class="row g-3">
               <div class="col-sm-6">
                 <label asp-for="Name" class="form-label">@L["Contact.Name"] <span class="text-danger">*</span></label>
-                <input asp-for="Name" class="form-control" placeholder="PLACEHOLDER" />
+                <input asp-for="Name" class="form-control" placeholder="Your full name" />
                 <span asp-validation-for="Name" class="text-danger small"></span>
               </div>
               <div class="col-sm-6">
@@ -74,11 +80,11 @@
               <div class="col-12">
                 <label asp-for="Message" class="form-label">@L["Contact.Message"] <span class="text-danger">*</span></label>
                 <textarea asp-for="Message" class="form-control" rows="5"
-                          placeholder="Tell us about your project or question..."></textarea>
+                          placeholder="Tell us about your project, site, or question..."></textarea>
                 <span asp-validation-for="Message" class="text-danger small"></span>
               </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-suprema btn-lg px-5">@L["Contact.Submit"]</button>
+              <div class="col-12 mt-2">
+                <button type="submit" class="btn-suprema px-5">@L["Contact.Submit"]</button>
               </div>
             </div>
           </form>

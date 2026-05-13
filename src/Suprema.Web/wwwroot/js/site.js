@@ -3,21 +3,27 @@
 (function () {
     'use strict';
 
-    // ── Scroll-driven header (transparent → white) ───────────────────────────
+    // ── Scroll-driven header (transparent → white, homepage only) ───────────
     var header = document.getElementById('site-header');
+    var isHome  = window.location.pathname === '/' || window.location.pathname === '';
     if (header) {
-        var SCROLL_THRESHOLD = 80;
-        function updateHeader() {
-            if (window.scrollY > SCROLL_THRESHOLD) {
-                header.classList.remove('header-transparent');
-                header.classList.add('header-white');
-            } else {
-                header.classList.remove('header-white');
-                header.classList.add('header-transparent');
+        if (isHome) {
+            var SCROLL_THRESHOLD = 80;
+            header.classList.remove('header-white');
+            header.classList.add('header-transparent');
+            function updateHeader() {
+                if (window.scrollY > SCROLL_THRESHOLD) {
+                    header.classList.remove('header-transparent');
+                    header.classList.add('header-white');
+                } else {
+                    header.classList.remove('header-white');
+                    header.classList.add('header-transparent');
+                }
             }
+            updateHeader();
+            window.addEventListener('scroll', updateHeader, { passive: true });
         }
-        updateHeader();
-        window.addEventListener('scroll', updateHeader, { passive: true });
+        // Non-home pages: header stays header-white (set in HTML default)
     }
 
     // ── Active nav link ──────────────────────────────────────────────────────

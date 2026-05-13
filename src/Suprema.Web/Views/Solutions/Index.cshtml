@@ -2,9 +2,17 @@
 @{
     ViewData["Title"] = "Industry Solutions";
     ViewData["MetaDescription"] = "Suprema South Africa delivers proven biometric security solutions across enterprise, healthcare, retail, education and government sectors.";
+    var solImages = new System.Collections.Generic.Dictionary<string, string>
+    {
+        ["enterprise"]   = "/assets/images/bg_commercial.jpg",
+        ["healthcare"]   = "/assets/images/bg_healthcare.jpg",
+        ["retail"]       = "/assets/images/bg_commercial.jpg",
+        ["education"]    = "/assets/images/bg_infrastructure.jpg",
+        ["government"]   = "/assets/images/bg_datacenter.jpg"
+    };
 }
 
-<section class="page-hero">
+<section class="page-hero hero-solutions">
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -13,30 +21,30 @@
       </ol>
     </nav>
     <h1>@L["Solutions.Title"]</h1>
-    <p class="text-muted mb-0">PLACEHOLDER — solutions overview from approved copy.</p>
+    <p class="page-hero-sub">Tailored biometric deployments for every sector — from enterprise campuses to government facilities.</p>
   </div>
 </section>
 
-<section class="py-5">
+<section class="section-lg">
   <div class="container">
     <div class="row g-4">
+      @{int si = 0;}
       @foreach (var sol in Model)
       {
-        <div class="col-md-6 col-lg-4">
-          <div class="card card-solution h-100">
-            <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height:180px;">
-              <span class="text-muted small">PLACEHOLDER — @sol.Name image</span>
+        solImages.TryGetValue(sol.Slug, out var bgImg);
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-@((si % 3) + 1)">
+          <a asp-controller="Solutions" asp-action="Detail" asp-route-slug="@sol.Slug"
+             class="card-solution-grid d-block" style="min-height:300px;">
+            <div class="sol-bg" style="background-image:url('@(bgImg ?? "/assets/images/section02-bg.jpg")');">
             </div>
-            <div class="card-body">
-              <h5 class="fw-bold text-suprema">@sol.Name</h5>
-              <p class="text-muted small">@sol.TagLine</p>
+            <div class="sol-body">
+              <h5>@sol.Name</h5>
+              <p>@sol.TagLine</p>
+              <span class="btn-outline-white btn-sm mt-3 d-inline-flex">@L["Common.LearnMore"]</span>
             </div>
-            <div class="card-footer bg-transparent border-0 pb-3">
-              <a asp-controller="Solutions" asp-action="Detail" asp-route-slug="@sol.Slug"
-                 class="btn btn-outline-suprema btn-sm w-100">@L["Common.LearnMore"]</a>
-            </div>
-          </div>
+          </a>
         </div>
+        si++;
       }
     </div>
   </div>

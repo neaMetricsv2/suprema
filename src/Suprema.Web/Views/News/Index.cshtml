@@ -1,7 +1,7 @@
 @model IReadOnlyList<Article>
 @{
     ViewData["Title"] = "News";
-    ViewData["MetaDescription"] = "Latest news and updates from Suprema South Africa.";
+    ViewData["MetaDescription"] = "Latest news and updates from Suprema South Africa — product launches, industry insights and partner announcements.";
 }
 
 <section class="page-hero">
@@ -13,43 +13,55 @@
       </ol>
     </nav>
     <h1>@L["News.Title"]</h1>
+    <p class="page-hero-sub">Product launches, industry insights and partner announcements from our South Africa team.</p>
   </div>
 </section>
 
-<section class="py-5">
+<section class="section-lg">
   <div class="container">
     @if (!Model.Any())
     {
-      <p class="text-muted">No articles published yet.</p>
+      <p class="text-muted text-center">No articles published yet.</p>
     }
     else
     {
       <div class="row g-4">
+        @{int ni = 0;}
         @foreach (var article in Model)
         {
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="d-flex align-items-center justify-content-center bg-light" style="height:180px;">
-                <span class="text-muted small">PLACEHOLDER — article image</span>
-              </div>
-              <div class="card-body">
-                <p class="text-muted small mb-1">
-                  @L["News.Published"]: @article.PublishedUtc.ToString("d MMMM yyyy")
-                  @if (article.Author is not null) { <span class="ms-2">— @article.Author</span> }
-                </p>
-                <h5 class="fw-bold">@article.Title</h5>
-                <p class="text-muted small">@article.Excerpt</p>
-                @foreach (var tag in article.Tags)
+          <div class="col-md-6 col-lg-4 reveal reveal-delay-@((ni % 3) + 1)">
+            <div class="card h-100" style="border:1px solid var(--sup-border-light);border-radius:14px;overflow:hidden;">
+              <div style="height:200px;background:linear-gradient(135deg,var(--sup-dark) 0%,var(--sup-dark-purple) 100%);display:flex;align-items:center;justify-content:center;">
+                @if (article.HeroImage is not null)
                 {
-                  <span class="card-tag me-1">@tag</span>
+                  <img src="@article.HeroImage" alt="@article.Title" style="width:100%;height:200px;object-fit:cover;" />
+                }
+                else
+                {
+                  <span style="color:rgba(255,255,255,.25);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;">@article.Tags.FirstOrDefault()</span>
                 }
               </div>
-              <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="card-body p-4">
+                <p class="mb-2" style="font-size:.75rem;color:var(--sup-primary);font-weight:600;text-transform:uppercase;letter-spacing:.07em;">
+                  @article.PublishedUtc.ToString("d MMMM yyyy")
+                  @if (article.Author is not null) { <span style="color:var(--sup-muted-light);"> &mdash; @article.Author</span> }
+                </p>
+                <h5 class="fw-bold mb-2" style="font-size:.98rem;line-height:1.4;">@article.Title</h5>
+                <p style="color:var(--sup-muted);font-size:.88rem;font-weight:300;line-height:1.7;">@article.Excerpt</p>
+                <div class="mt-2">
+                  @foreach (var tag in article.Tags.Take(3))
+                  {
+                    <span class="card-tag me-1">@tag</span>
+                  }
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 px-4 pb-4">
                 <a asp-controller="News" asp-action="Article" asp-route-slug="@article.Slug"
-                   class="btn btn-outline-suprema btn-sm">@L["News.ReadMore"]</a>
+                   class="btn-outline-suprema btn-sm">@L["News.ReadMore"]</a>
               </div>
             </div>
           </div>
+          ni++;
         }
       </div>
     }

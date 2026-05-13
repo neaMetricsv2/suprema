@@ -29,6 +29,7 @@
   <data name="Nav.About"         xml:space="preserve"><value>About</value></data>
   <data name="Nav.Contact"       xml:space="preserve"><value>Contact</value></data>
   <data name="Nav.RequestQuote"  xml:space="preserve"><value>Request a Quote</value></data>
+  <data name="Nav.WhereToBy"     xml:space="preserve"><value>Where to Buy</value></data>
 
   <!-- Common actions -->
   <data name="Common.LearnMore"    xml:space="preserve"><value>Learn More</value></data>

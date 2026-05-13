@@ -3,6 +3,16 @@
     var cat = (ProductCategory)ViewData["Category"]!;
     ViewData["Title"] = cat.Name;
     ViewData["MetaDescription"] = cat.Description;
+    var productImages = new System.Collections.Generic.Dictionary<string, string>
+    {
+        ["xstation-2"]    = "/assets/products/xstation-2.png",
+        ["biostation-3"]  = "/assets/products/biostation-3.png",
+        ["bioentry-w3"]   = "/assets/products/bioentry-w3.png",
+        ["biostation-a2"] = "/assets/products/biostation-a2.png",
+        ["facestation-2"] = "/assets/products/facestation-2.png",
+        ["biomini-plus-2"]= "/assets/products/biomini-plus-2.png",
+        ["biomini-slim-3"]= "/assets/products/biomini-slim-3.png"
+    };
 }
 
 <section class="page-hero">
@@ -15,37 +25,45 @@
       </ol>
     </nav>
     <h1>@cat.Name</h1>
-    <p class="text-muted mb-0">@cat.Description</p>
+    <p class="page-hero-sub">@cat.Description</p>
   </div>
 </section>
 
-<section class="py-5">
+<section class="section-lg">
   <div class="container">
     @if (!Model.Any())
     {
-      <p class="text-muted">No products in this category yet.</p>
+      <p class="text-muted text-center">No products in this category yet.</p>
     }
     else
     {
       <div class="row g-4">
         @foreach (var product in Model)
         {
-          <div class="col-sm-6 col-lg-4">
+          productImages.TryGetValue(product.Slug, out var img);
+          <div class="col-sm-6 col-lg-4 reveal">
             <div class="card card-product h-100">
-              <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height:200px;">
-                <span class="text-muted small">PLACEHOLDER — @product.Name</span>
+              <div class="card-img-top">
+                @if (!string.IsNullOrEmpty(img))
+                {
+                  <img src="@img" alt="@product.Name" />
+                }
+                else
+                {
+                  <span class="text-muted small" style="opacity:.4;">@product.Name</span>
+                }
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 pt-3 pb-2">
                 @if (product.Featured)
                 {
-                  <span class="card-tag mb-2 d-inline-block" style="background:#fff3cd;color:#856404;">Featured</span>
+                  <span class="card-tag mb-2 d-inline-block" style="background:rgba(161,41,68,.1);color:var(--sup-primary);">Featured</span>
                 }
                 <h5 class="card-title">@product.Name</h5>
-                <p class="text-muted small">@product.TagLine</p>
+                <p style="font-size:.88rem;color:var(--sup-muted);font-weight:300;line-height:1.6;">@product.TagLine</p>
               </div>
-              <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="card-footer bg-transparent border-0 px-3 pb-3">
                 <a href="/products/@cat.Slug/@product.Slug"
-                   class="btn btn-outline-suprema btn-sm w-100">@L["Common.LearnMore"]</a>
+                   class="btn-outline-suprema btn-sm w-100 justify-content-center">@L["Common.LearnMore"]</a>
               </div>
             </div>
           </div>

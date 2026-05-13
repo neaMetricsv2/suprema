@@ -1,7 +1,13 @@
 @model IReadOnlyList<ProductCategory>
 @{
     ViewData["Title"] = "Products";
-    ViewData["MetaDescription"] = "Browse Suprema South Africa's full range of access control, time & attendance and biometric products.";
+    ViewData["MetaDescription"] = "Browse Suprema South Africa's full range of access control, time & attendance and biometric solutions — enterprise-grade, locally supported.";
+    var catImages = new System.Collections.Generic.Dictionary<string, string>
+    {
+        ["access-control"] = "/assets/images/access_control_visual.jpg",
+        ["time-attendance"] = "/assets/images/bg_biostation_2a_1.jpg",
+        ["biometrics"]      = "/assets/images/bg_biostation3_2.jpg"
+    };
 }
 
 <section class="page-hero">
@@ -13,28 +19,24 @@
       </ol>
     </nav>
     <h1>@L["Products.AllCategories"]</h1>
-    <p class="text-muted mb-0">PLACEHOLDER — products page intro from approved copy.</p>
+    <p class="page-hero-sub">Enterprise-grade biometric hardware, delivered and supported locally across South Africa.</p>
   </div>
 </section>
 
-<section class="py-5">
+<section class="section-lg">
   <div class="container">
     <div class="row g-4">
       @foreach (var cat in Model)
       {
-        <div class="col-md-4">
-          <a href="/products/@cat.Slug" class="text-decoration-none">
-            <div class="card card-product h-100">
-              <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height:180px;">
-                <span class="text-muted small">PLACEHOLDER — @cat.Name image</span>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">@cat.Name</h5>
-                <p class="text-muted small">@cat.Description</p>
-              </div>
-              <div class="card-footer bg-transparent border-0 pb-3">
-                <span class="btn btn-outline-suprema btn-sm">@L["Common.LearnMore"]</span>
-              </div>
+        catImages.TryGetValue(cat.Slug, out var bgImg);
+        <div class="col-md-4 reveal">
+          <a href="/products/@cat.Slug" class="card-solution-grid d-block" style="min-height:320px;">
+            <div class="sol-bg" style="background-image:url('@(bgImg ?? "/assets/images/section02-bg.jpg")');">
+            </div>
+            <div class="sol-body">
+              <h5>@cat.Name</h5>
+              <p>@cat.Description</p>
+              <span class="btn-outline-white btn-sm mt-3 d-inline-flex">@L["Common.LearnMore"]</span>
             </div>
           </a>
         </div>
