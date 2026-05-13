@@ -1,4 +1,4 @@
-@model Product
+﻿@model Product
 @inject Suprema.Core.Abstractions.IContentService Content
 @{
     var cat = Content.GetCategory(Model.CategorySlug);
@@ -11,9 +11,9 @@
         .ToList();
     var productImages = new System.Collections.Generic.Dictionary<string, string>
     {
-        ["xstation-2"]    = "/assets/products/xstation-2.png",
-        ["biostation-3"]  = "/assets/products/biostation-3.png",
-        ["bioentry-w3"]   = "/assets/products/bioentry-w3.png",
+        ["xstation-2"]    = "/assets/products/xstation-2.webp",
+        ["biostation-3"]  = "/assets/products/biostation-3.webp",
+        ["bioentry-w3"]   = "/assets/products/bioentry-w3.webp",
         ["biostation-a2"] = "/assets/products/biostation-a2.png",
         ["facestation-2"] = "/assets/products/facestation-2.png",
         ["biomini-plus-2"]= "/assets/products/biomini-plus-2.png",
@@ -22,7 +22,7 @@
     productImages.TryGetValue(Model.Slug, out var heroImg);
 }
 
-@* ── Sub-visual hero ────────────────────────────────────────────────────────── *@
+@* â”€â”€ Sub-visual hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 <section class="page-hero">
   <div class="container">
     <nav aria-label="breadcrumb">
@@ -43,7 +43,7 @@
   </div>
 </section>
 
-@* ── Sticky in-page nav ──────────────────────────────────────────────────────── *@
+@* â”€â”€ Sticky in-page nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 <nav class="prod-sticky-nav">
   <div class="container">
     <ul>
@@ -56,7 +56,7 @@
   </div>
 </nav>
 
-@* ── Overview ────────────────────────────────────────────────────────────────── *@
+@* â”€â”€ Overview â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 @if (!string.IsNullOrEmpty(Model.Summary))
 {
   <section id="overview" class="section-lg">
@@ -95,7 +95,7 @@
   </section>
 }
 
-@* ── Key features ────────────────────────────────────────────────────────────── *@
+@* â”€â”€ Key features â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 @if (Model.Features.Count > 0)
 {
   <section id="features" class="section-lg section-light">
@@ -126,7 +126,7 @@
   </section>
 }
 
-@* ── Specifications ──────────────────────────────────────────────────────────── *@
+@* â”€â”€ Specifications â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 @if (Model.Specs.Count > 0)
 {
   <section id="specifications" class="section-lg">
@@ -162,7 +162,7 @@
   </section>
 }
 
-@* ── Related products ────────────────────────────────────────────────────────── *@
+@* â”€â”€ Related products â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 @if (related.Count > 0)
 {
   <section id="related" class="section-lg section-light">
@@ -200,15 +200,16 @@
   </section>
 }
 
-@* ── CTA ─────────────────────────────────────────────────────────────────────── *@
+@* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 <section class="cta-strip section-md text-center text-white">
   <div class="container reveal">
     <h3 class="fw-bold mb-3" style="font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-0.025em;">
       Interested in @Model.Name for your organisation?
     </h3>
     <p class="mb-4" style="opacity:.75;font-weight:300;">
-      Talk to our South Africa team — we respond within one business day.
+      Talk to our South Africa team â€” we respond within one business day.
     </p>
     <a class="btn-suprema" asp-controller="Contact" asp-action="Index">@L["Nav.RequestQuote"]</a>
   </div>
 </section>
+

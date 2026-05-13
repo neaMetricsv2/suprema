@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews()
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
 
-builder.Services.AddLocalization(o => o.ResourcesPath = "Resources");
+builder.Services.AddLocalization(o => o.ResourcesPath = "");
 
 var contentRoot = Path.Combine(builder.Environment.ContentRootPath, "..", "Suprema.Content", "Data");
 builder.Services.AddSupremaContent(Path.GetFullPath(contentRoot));

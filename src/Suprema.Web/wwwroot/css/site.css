@@ -651,7 +651,12 @@ a:hover { color: var(--sup-primary-dark); }
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(33,33,38,.88);
+    background: linear-gradient(
+        to bottom,
+        rgba(33,33,38,.55) 0%,
+        rgba(33,33,38,.82) 30%,
+        rgba(33,33,38,.95) 100%
+    );
 }
 .site-footer .container { position: relative; z-index: 1; }
 .site-footer a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .25s; }

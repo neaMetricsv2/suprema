@@ -1,4 +1,4 @@
-@model Solution
+﻿@model Solution
 @inject Suprema.Core.Abstractions.IContentService Content
 @{
     ViewData["Title"] = Model.Name + " Solutions";
@@ -10,9 +10,9 @@
         .ToList();
     var productImages = new System.Collections.Generic.Dictionary<string, string>
     {
-        ["xstation-2"]    = "/assets/products/xstation-2.png",
-        ["biostation-3"]  = "/assets/products/biostation-3.png",
-        ["bioentry-w3"]   = "/assets/products/bioentry-w3.png",
+        ["xstation-2"]    = "/assets/products/xstation-2.webp",
+        ["biostation-3"]  = "/assets/products/biostation-3.webp",
+        ["bioentry-w3"]   = "/assets/products/bioentry-w3.webp",
         ["biostation-a2"] = "/assets/products/biostation-a2.png",
         ["facestation-2"] = "/assets/products/facestation-2.png",
         ["biomini-plus-2"]= "/assets/products/biomini-plus-2.png",
@@ -29,7 +29,7 @@
     solImages.TryGetValue(Model.Slug, out var heroBg);
 }
 
-@* ── Hero ────────────────────────────────────────────────────────────────────── *@
+@* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 <section class="page-hero" style="@(!string.IsNullOrEmpty(heroBg) ? $"background-image:url('{heroBg}');" : "")">
   <div class="container">
     <nav aria-label="breadcrumb">
@@ -45,7 +45,7 @@
   </div>
 </section>
 
-@* ── Body ─────────────────────────────────────────────────────────────────────── *@
+@* â”€â”€ Body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 <section class="section-lg">
   <div class="container">
     <div class="row justify-content-center">
@@ -58,7 +58,7 @@
   </div>
 </section>
 
-@* ── Related products ────────────────────────────────────────────────────────── *@
+@* â”€â”€ Related products â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 @if (relatedProducts.Count > 0)
 {
   <section id="related-products" class="section-lg section-light">
@@ -97,7 +97,7 @@
   </section>
 }
 
-@* ── Case studies ────────────────────────────────────────────────────────────── *@
+@* â”€â”€ Case studies â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 @if (Model.CaseStudies.Count > 0)
 {
   <section class="section-lg">
@@ -126,7 +126,7 @@
   </section>
 }
 
-@* ── CTA ─────────────────────────────────────────────────────────────────────── *@
+@* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ *@
 <section class="cta-strip section-md text-center text-white">
   <div class="container reveal">
     <h3 class="fw-bold mb-3" style="font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-0.025em;">
@@ -139,3 +139,4 @@
     </div>
   </div>
 </section>
+

@@ -1,13 +1,13 @@
-@model IReadOnlyList<Product>
+﻿@model IReadOnlyList<Product>
 @{
     var cat = (ProductCategory)ViewData["Category"]!;
     ViewData["Title"] = cat.Name;
     ViewData["MetaDescription"] = cat.Description;
     var productImages = new System.Collections.Generic.Dictionary<string, string>
     {
-        ["xstation-2"]    = "/assets/products/xstation-2.png",
-        ["biostation-3"]  = "/assets/products/biostation-3.png",
-        ["bioentry-w3"]   = "/assets/products/bioentry-w3.png",
+        ["xstation-2"]    = "/assets/products/xstation-2.webp",
+        ["biostation-3"]  = "/assets/products/biostation-3.webp",
+        ["bioentry-w3"]   = "/assets/products/bioentry-w3.webp",
         ["biostation-a2"] = "/assets/products/biostation-a2.png",
         ["facestation-2"] = "/assets/products/facestation-2.png",
         ["biomini-plus-2"]= "/assets/products/biomini-plus-2.png",
@@ -72,3 +72,4 @@
     }
   </div>
 </section>
+
