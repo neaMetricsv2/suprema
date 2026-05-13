@@ -64,6 +64,12 @@ app.MapControllerRoute(
     pattern: "legal/{slug}",
     defaults: new { controller = "Legal", action = "Show" });
 
+// Named static pages: /about, /contact, /news  (clean URLs per §7 routing map)
+app.MapControllerRoute(
+    name: "about",
+    pattern: "about",
+    defaults: new { controller = "Pages", action = "Show", slug = "about" });
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
