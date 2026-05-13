@@ -39,8 +39,8 @@
   <data name="Common.NotFound"     xml:space="preserve"><value>Page Not Found</value></data>
 
   <!-- Home page -->
-  <data name="Home.HeroTitle"       xml:space="preserve"><value>PLACEHOLDER — Hero headline from approved copy</value></data>
-  <data name="Home.HeroSubtitle"    xml:space="preserve"><value>PLACEHOLDER — Hero subheading from approved partner kit.</value></data>
+  <data name="Home.HeroTitle"       xml:space="preserve"><value>Biometric Security, Built for South Africa</value></data>
+  <data name="Home.HeroSubtitle"    xml:space="preserve"><value>Suprema's world-class access control and time &amp; attendance solutions — delivered and supported locally by our expert team across South Africa.</value></data>
   <data name="Home.FeaturedProducts" xml:space="preserve"><value>Featured Products</value></data>
   <data name="Home.Categories"      xml:space="preserve"><value>Product Categories</value></data>
   <data name="Home.Solutions"       xml:space="preserve"><value>Industry Solutions</value></data>
@@ -65,7 +65,7 @@
 
   <!-- Contact form -->
   <data name="Contact.Title"        xml:space="preserve"><value>Contact Us</value></data>
-  <data name="Contact.Intro"        xml:space="preserve"><value>PLACEHOLDER — contact page intro from approved copy.</value></data>
+  <data name="Contact.Intro"        xml:space="preserve"><value>Get in touch with our South Africa team. We respond to all enquiries within one business day.</value></data>
   <data name="Contact.Name"         xml:space="preserve"><value>Full Name</value></data>
   <data name="Contact.Email"        xml:space="preserve"><value>Email Address</value></data>
   <data name="Contact.Phone"        xml:space="preserve"><value>Phone Number</value></data>
@@ -75,7 +75,7 @@
   <data name="Contact.ThankYouMsg"  xml:space="preserve"><value>Thank you for your enquiry. We'll be in touch shortly.</value></data>
 
   <!-- Footer -->
-  <data name="Footer.Tagline"    xml:space="preserve"><value>PLACEHOLDER — ZA entity tagline.</value></data>
+  <data name="Footer.Tagline"    xml:space="preserve"><value>Authorised Suprema partner for South Africa &amp; sub-Saharan Africa.</value></data>
   <data name="Footer.Rights"     xml:space="preserve"><value>All rights reserved.</value></data>
   <data name="Footer.Products"   xml:space="preserve"><value>Products</value></data>
   <data name="Footer.Solutions"  xml:space="preserve"><value>Solutions</value></data>
