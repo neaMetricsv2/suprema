@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="xml:space" use="optional" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+
+  <!-- Navigation -->
+  <data name="Nav.Products"      xml:space="preserve"><value>Products</value></data>
+  <data name="Nav.Solutions"     xml:space="preserve"><value>Solutions</value></data>
+  <data name="Nav.News"          xml:space="preserve"><value>News</value></data>
+  <data name="Nav.About"         xml:space="preserve"><value>About</value></data>
+  <data name="Nav.Contact"       xml:space="preserve"><value>Contact</value></data>
+  <data name="Nav.RequestQuote"  xml:space="preserve"><value>Request a Quote</value></data>
+
+  <!-- Common actions -->
+  <data name="Common.LearnMore"    xml:space="preserve"><value>Learn More</value></data>
+  <data name="Common.ViewAll"      xml:space="preserve"><value>View All</value></data>
+  <data name="Common.RequestQuote" xml:space="preserve"><value>Request a Quote</value></data>
+  <data name="Common.Download"     xml:space="preserve"><value>Download Datasheet</value></data>
+  <data name="Common.BackTo"       xml:space="preserve"><value>Back to</value></data>
+  <data name="Common.NotFound"     xml:space="preserve"><value>Page Not Found</value></data>
+
+  <!-- Home page -->
+  <data name="Home.HeroTitle"       xml:space="preserve"><value>PLACEHOLDER — Hero headline from approved copy</value></data>
+  <data name="Home.HeroSubtitle"    xml:space="preserve"><value>PLACEHOLDER — Hero subheading from approved partner kit.</value></data>
+  <data name="Home.FeaturedProducts" xml:space="preserve"><value>Featured Products</value></data>
+  <data name="Home.Categories"      xml:space="preserve"><value>Product Categories</value></data>
+  <data name="Home.Solutions"       xml:space="preserve"><value>Industry Solutions</value></data>
+  <data name="Home.LatestNews"      xml:space="preserve"><value>Latest News</value></data>
+
+  <!-- Products -->
+  <data name="Products.AllCategories"   xml:space="preserve"><value>All Product Categories</value></data>
+  <data name="Products.Specifications"  xml:space="preserve"><value>Specifications</value></data>
+  <data name="Products.KeyFeatures"     xml:space="preserve"><value>Key Features</value></data>
+  <data name="Products.RelatedProducts" xml:space="preserve"><value>Related Products</value></data>
+  <data name="Products.Gallery"         xml:space="preserve"><value>Gallery</value></data>
+
+  <!-- Solutions -->
+  <data name="Solutions.Title"      xml:space="preserve"><value>Industry Solutions</value></data>
+  <data name="Solutions.CaseStudies" xml:space="preserve"><value>Case Studies</value></data>
+  <data name="Solutions.RelatedProducts" xml:space="preserve"><value>Related Products</value></data>
+
+  <!-- News -->
+  <data name="News.Title"      xml:space="preserve"><value>News &amp; Updates</value></data>
+  <data name="News.ReadMore"   xml:space="preserve"><value>Read More</value></data>
+  <data name="News.Published"  xml:space="preserve"><value>Published</value></data>
+
+  <!-- Contact form -->
+  <data name="Contact.Title"        xml:space="preserve"><value>Contact Us</value></data>
+  <data name="Contact.Intro"        xml:space="preserve"><value>PLACEHOLDER — contact page intro from approved copy.</value></data>
+  <data name="Contact.Name"         xml:space="preserve"><value>Full Name</value></data>
+  <data name="Contact.Email"        xml:space="preserve"><value>Email Address</value></data>
+  <data name="Contact.Phone"        xml:space="preserve"><value>Phone Number</value></data>
+  <data name="Contact.Message"      xml:space="preserve"><value>Message</value></data>
+  <data name="Contact.Submit"       xml:space="preserve"><value>Send Message</value></data>
+  <data name="Contact.ThankYou"     xml:space="preserve"><value>Thank You</value></data>
+  <data name="Contact.ThankYouMsg"  xml:space="preserve"><value>Thank you for your enquiry. We'll be in touch shortly.</value></data>
+
+  <!-- Footer -->
+  <data name="Footer.Tagline"    xml:space="preserve"><value>PLACEHOLDER — ZA entity tagline.</value></data>
+  <data name="Footer.Rights"     xml:space="preserve"><value>All rights reserved.</value></data>
+  <data name="Footer.Products"   xml:space="preserve"><value>Products</value></data>
+  <data name="Footer.Solutions"  xml:space="preserve"><value>Solutions</value></data>
+  <data name="Footer.Company"    xml:space="preserve"><value>Company</value></data>
+  <data name="Footer.Legal"      xml:space="preserve"><value>Legal</value></data>
+  <data name="Footer.Support"    xml:space="preserve"><value>Support Hours (SAST)</value></data>
+  <data name="Footer.SupportHours" xml:space="preserve"><value>Mon–Fri 08:00–17:00</value></data>
+
+  <!-- Cookie consent -->
+  <data name="Cookie.Message"           xml:space="preserve"><value>We use cookies to improve your experience on our site. You can accept all cookies, or choose which types to allow.</value></data>
+  <data name="Cookie.AcceptAll"         xml:space="preserve"><value>Accept all</value></data>
+  <data name="Cookie.RejectNonEssential" xml:space="preserve"><value>Reject non-essential</value></data>
+  <data name="Cookie.Customise"         xml:space="preserve"><value>Customise</value></data>
+  <data name="Cookie.PolicyLink"        xml:space="preserve"><value>Cookie Policy</value></data>
+</root>
