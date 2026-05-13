@@ -1,0 +1,43 @@
+@model IReadOnlyList<Solution>
+@{
+    ViewData["Title"] = "Industry Solutions";
+    ViewData["MetaDescription"] = "Suprema South Africa delivers proven biometric security solutions across enterprise, healthcare, retail, education and government sectors.";
+}
+
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active">Solutions</li>
+      </ol>
+    </nav>
+    <h1>@L["Solutions.Title"]</h1>
+    <p class="text-muted mb-0">PLACEHOLDER — solutions overview from approved copy.</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      @foreach (var sol in Model)
+      {
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-solution h-100">
+            <div class="card-img-top d-flex align-items-center justify-content-center bg-light" style="height:180px;">
+              <span class="text-muted small">PLACEHOLDER — @sol.Name image</span>
+            </div>
+            <div class="card-body">
+              <h5 class="fw-bold text-suprema">@sol.Name</h5>
+              <p class="text-muted small">@sol.TagLine</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <a asp-controller="Solutions" asp-action="Detail" asp-route-slug="@sol.Slug"
+                 class="btn btn-outline-suprema btn-sm w-100">@L["Common.LearnMore"]</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

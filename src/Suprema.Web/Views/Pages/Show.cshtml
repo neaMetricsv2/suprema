@@ -1,0 +1,34 @@
+@model ContentPageViewModel
+@{
+    ViewData["Title"] = Model.Page.Title;
+    if (Model.Page.MetaDescription is not null)
+        ViewData["MetaDescription"] = Model.Page.MetaDescription;
+}
+
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active">@Model.Page.Title</li>
+      </ol>
+    </nav>
+    <h1>@Model.Page.Title</h1>
+    @if (Model.Page.UpdatedUtc != default)
+    {
+      <p class="text-muted small mb-0">Last updated: @Model.Page.UpdatedUtc.ToString("d MMMM yyyy")</p>
+    }
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="article-body">
+          @Html.Raw(Markdown.ToHtml(Model.Page.MarkdownBody, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

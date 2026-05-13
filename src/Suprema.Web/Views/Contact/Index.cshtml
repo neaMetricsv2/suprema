@@ -1,0 +1,94 @@
+@model ContactFormViewModel
+@{
+    ViewData["Title"] = L["Contact.Title"].Value;
+}
+
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item active">@L["Contact.Title"]</li>
+      </ol>
+    </nav>
+    <h1>@L["Contact.Title"]</h1>
+    <p class="text-muted mb-0">@L["Contact.Intro"]</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5">
+
+      @* Contact details *@
+      <div class="col-lg-4">
+        <h5 class="fw-bold text-suprema mb-4">Get in touch</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <strong>Address</strong><br />
+            PLACEHOLDER — registered address<br />Johannesburg, South Africa
+          </li>
+          <li class="mb-3">
+            <strong>Tel</strong><br />
+            <a href="tel:+27XXXXXXXXXX">+27 (0)XX XXX XXXX</a>
+          </li>
+          <li class="mb-3">
+            <strong>Email</strong><br />
+            <a href="mailto:info@suprema.co.za">info@suprema.co.za</a>
+          </li>
+          <li class="mb-3">
+            <strong>Support hours (SAST)</strong><br />
+            @L["Footer.SupportHours"]
+          </li>
+        </ul>
+        <div class="alert alert-info small mt-4">
+          For technical support, visit
+          <a href="https://support.supremainc.com" target="_blank" rel="noopener">Suprema Global Support</a>.
+        </div>
+      </div>
+
+      @* Contact form *@
+      <div class="col-lg-7 offset-lg-1">
+        <div class="contact-box">
+          <h5 class="fw-bold text-suprema mb-4">Send us a message</h5>
+          <form asp-controller="Contact" asp-action="Index" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label asp-for="Name" class="form-label">@L["Contact.Name"] <span class="text-danger">*</span></label>
+                <input asp-for="Name" class="form-control" placeholder="PLACEHOLDER" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+              </div>
+              <div class="col-sm-6">
+                <label asp-for="Email" class="form-label">@L["Contact.Email"] <span class="text-danger">*</span></label>
+                <input asp-for="Email" class="form-control" placeholder="you@company.co.za" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+              </div>
+              <div class="col-sm-6">
+                <label asp-for="Phone" class="form-label">@L["Contact.Phone"]</label>
+                <input asp-for="Phone" class="form-control" placeholder="+27 (0)XX XXX XXXX" />
+                <span asp-validation-for="Phone" class="text-danger small"></span>
+              </div>
+              <div class="col-12">
+                <label asp-for="Message" class="form-label">@L["Contact.Message"] <span class="text-danger">*</span></label>
+                <textarea asp-for="Message" class="form-control" rows="5"
+                          placeholder="Tell us about your project or question..."></textarea>
+                <span asp-validation-for="Message" class="text-danger small"></span>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-suprema btn-lg px-5">@L["Contact.Submit"]</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+@section Scripts {
+  @await Html.PartialAsync("_ValidationScriptsPartial")
+}

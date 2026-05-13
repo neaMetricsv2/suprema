@@ -1,0 +1,57 @@
+@model Article
+@{
+    ViewData["Title"] = Model.Title;
+    ViewData["MetaDescription"] = Model.Excerpt;
+    ViewData["OgTitle"] = Model.Title;
+}
+
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="News" asp-action="Index">News</a></li>
+        <li class="breadcrumb-item active">@Model.Title</li>
+      </ol>
+    </nav>
+    <h1>@Model.Title</h1>
+    <p class="text-muted mb-0">
+      @L["News.Published"]: @Model.PublishedUtc.ToString("d MMMM yyyy")
+      @if (Model.Author is not null) { <span class="ms-2">— @Model.Author</span> }
+    </p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="mb-4 rounded-3 bg-light d-flex align-items-center justify-content-center" style="height:320px;">
+          <span class="text-muted">PLACEHOLDER — article hero image</span>
+        </div>
+
+        @foreach (var tag in Model.Tags)
+        {
+          <span class="card-tag me-1 mb-3 d-inline-block">@tag</span>
+        }
+
+        <div class="article-body">
+          @Html.Raw(Markdown.ToHtml(Model.Body, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
+        </div>
+
+        <hr class="my-4" />
+        <a class="btn btn-outline-suprema" asp-controller="News" asp-action="Index">
+          &larr; @L["Common.BackTo"] News
+        </a>
+      </div>
+
+      <div class="col-lg-3 offset-lg-1 mt-4 mt-lg-0">
+        <div class="card border-0 bg-suprema-light p-4">
+          <h6 class="fw-bold text-suprema text-uppercase mb-3" style="letter-spacing:.06em;font-size:.8rem;">Interested?</h6>
+          <p class="text-muted small mb-3">PLACEHOLDER — sidebar CTA.</p>
+          <a class="btn btn-suprema w-100" asp-controller="Contact" asp-action="Index">@L["Nav.RequestQuote"]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

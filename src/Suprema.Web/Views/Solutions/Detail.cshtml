@@ -1,0 +1,90 @@
+@model Solution
+@inject Suprema.Core.Abstractions.IContentService Content
+@{
+    ViewData["Title"] = Model.Name + " Solutions";
+    ViewData["MetaDescription"] = Model.TagLine;
+    var relatedProducts = Model.RelatedProductSlugs
+        .Select(s => Content.GetAllProducts().FirstOrDefault(p => p.Slug == s))
+        .Where(p => p is not null)
+        .Cast<Product>()
+        .ToList();
+}
+
+<section class="page-hero">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li class="breadcrumb-item"><a asp-controller="Solutions" asp-action="Index">Solutions</a></li>
+        <li class="breadcrumb-item active">@Model.Name</li>
+      </ol>
+    </nav>
+    <h1>@Model.Name</h1>
+    <p class="text-muted mb-0">@Model.TagLine</p>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <div class="article-body">
+          @Html.Raw(Markdown.ToHtml(Model.Body, new MarkdownPipelineBuilder().UseAdvancedExtensions().Build()))
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="card border-0 shadow-sm p-4 mb-4">
+          <h6 class="fw-bold text-suprema text-uppercase mb-3" style="letter-spacing:.06em;font-size:.8rem;">Get Started</h6>
+          <p class="text-muted small mb-3">PLACEHOLDER — solution sidebar CTA.</p>
+          <a class="btn btn-suprema w-100" asp-controller="Contact" asp-action="Index">@L["Nav.RequestQuote"]</a>
+        </div>
+      </div>
+    </div>
+
+    @* Related products *@
+    @if (relatedProducts.Count > 0)
+    {
+      <hr class="my-4" />
+      <h4 class="section-title mb-3">@L["Solutions.RelatedProducts"]</h4>
+      <div class="row g-3">
+        @foreach (var p in relatedProducts)
+        {
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-product h-100">
+              <div class="card-body">
+                <span class="card-tag mb-2 d-inline-block">@p.CategorySlug.Replace("-"," ")</span>
+                <h6 class="card-title">@p.Name</h6>
+                <p class="text-muted small">@p.TagLine</p>
+                <a href="/products/@p.CategorySlug/@p.Slug"
+                   class="btn btn-outline-suprema btn-sm">@L["Common.LearnMore"]</a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+
+    @* Case studies *@
+    @if (Model.CaseStudies.Count > 0)
+    {
+      <hr class="my-4" />
+      <h4 class="section-title mb-3">@L["Solutions.CaseStudies"]</h4>
+      <div class="row g-4">
+        @foreach (var cs in Model.CaseStudies)
+        {
+          <div class="col-md-6">
+            <div class="card border-0 bg-suprema-light p-4 h-100">
+              <p class="fw-bold mb-1">@cs.Title</p>
+              <p class="text-muted small mb-1">@cs.Customer</p>
+              <p class="small mb-0">@cs.Summary</p>
+              @if (cs.Url is not null)
+              {
+                <a href="@cs.Url" class="btn btn-outline-suprema btn-sm mt-3" target="_blank" rel="noopener">Read Case Study</a>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>
